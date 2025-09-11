@@ -16,3 +16,9 @@
   overflow: hidden;
   -webkit-line-clamp: $lines;
 }
+
+// Transition mixin
+@mixin transition($prop, $time: 0.2s, $timing: ease) {
+  transition: #{$prop} $time $timing;
+}
+
