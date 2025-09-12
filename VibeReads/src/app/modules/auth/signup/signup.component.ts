@@ -20,7 +20,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -47,6 +48,7 @@ export class SignupComponent implements OnInit {
   }
 
   get f(): { [key: string]: AbstractControl } {
+    console.log("Hi");
     return this.form.controls;
   }
 
@@ -70,6 +72,7 @@ export class SignupComponent implements OnInit {
   }
 
   getPasswordError(): string {
+    console.log("in getPasswordError")
     const c = this.f['password'];
     if (!c) return '';
     if (c.hasError('required')) return ValidationMessages.PASSWORD_REQUIRED;
@@ -100,6 +103,7 @@ export class SignupComponent implements OnInit {
     this.authService.register(this.form.value).subscribe({
       next : () => {
         this.isSubmitting = false;
+        this.router.navigate(['/dashboard']);
       },
       error: () => {
         this.errorMessage = 'Signup failed. Please try again.'

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { strongPasswordValidator ,uniqueUsernameValidator, uniqueEmailValidator, emailValidator } from '@shared/validators/';
+import { emailValidator } from '@shared/validators/';
 import { ValidationMessages } from '@shared/constants/';
 import { AuthService , UserService} from '@shared/services/';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-login',
   templateUrl: './login.html',
   styleUrls: ['../auth.scss']
 })
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -27,19 +29,13 @@ export class LoginComponent implements OnInit {
 
   private buildForm() {
     this.form = this.fb.group({
-      username: [
-        '',
-        [Validators.required, Validators.minLength(3), Validators.maxLength(15)],
-        [uniqueUsernameValidator(this.userService)]
-      ],
       email: [
         '',
-        [Validators.required, Validators.email, emailValidator()],
-        [uniqueEmailValidator(this.userService)],
+        [Validators.required, Validators.email, emailValidator()]
       ],
       password: [
         '',
-        [Validators.required, Validators.minLength(8), strongPasswordValidator(), Validators.maxLength(16)]
+        [Validators.required]
       ]
     });
   }
@@ -48,22 +44,11 @@ export class LoginComponent implements OnInit {
     return this.form.controls;
   }
 
-  getUsernameError(): string {
-    const c = this.f['username'];
-    if (!c) return '';
-    if (c.hasError('required')) return ValidationMessages.USERNAME_REQUIRED;
-    if (c.hasError('minlength')) return ValidationMessages.USERNAME_MIN;
-    if (c.hasError('maxlength')) return ValidationMessages.USERNAME_MAX;
-    if (c.hasError('usernameTaken')) return ValidationMessages.USERNAME_TAKEN;
-    return '';
-  }
-
   getEmailError(): string {
     const c = this.f['email'];
     if (!c) return '';
     if (c.hasError('required')) return ValidationMessages.EMAIL_REQUIRED;
     if (c.hasError('email') || c.hasError('validEmail')) return ValidationMessages.EMAIL_INVALID;
-    if (c.hasError('emailTaken')) return ValidationMessages.EMAIL_EXISTS;
     return '';
   }
 
@@ -71,16 +56,6 @@ export class LoginComponent implements OnInit {
     const c = this.f['password'];
     if (!c) return '';
     if (c.hasError('required')) return ValidationMessages.PASSWORD_REQUIRED;
-    if (c.hasError('minlength')) return ValidationMessages.PASSWORD_MIN;
-    if (c.hasError('maxlength')) return ValidationMessages.PASSWORD_MAX;
-    if (c.hasError('strongPassword')) {
-      const errors = c.getError('strongPassword');
-      if (!errors.hasUpper) return ValidationMessages.PASSWORD_UPPER;
-      if (!errors.hasLower) return ValidationMessages.PASSWORD_LOWER;
-      if (!errors.hasNumber) return ValidationMessages.PASSWORD_NUMBER;
-      if (errors.specialCount < 2) return ValidationMessages.PASSWORD_SPECIAL;
-      return ValidationMessages.PASSWORD_WEAK;
-    }
     return '';
   }
 
@@ -95,12 +70,13 @@ export class LoginComponent implements OnInit {
     this.isSubmitting =  true;
     this.errorMessage = '';
     
-    this.authService.register(this.form.value).subscribe({
+    this.authService.login(this.form.value).subscribe({
       next : () => {
         this.isSubmitting = false;
+        this.router.navigate(['/dashboard']);
       },
       error: () => {
-        this.errorMessage = 'Signup failed. Please try again.'
+        this.errorMessage = 'Login failed. Please try again.'
         this.isSubmitting = false;
       }
     })
