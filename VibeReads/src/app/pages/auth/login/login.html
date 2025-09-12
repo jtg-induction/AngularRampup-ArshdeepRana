@@ -1,0 +1,25 @@
+<div class="auth">
+  <h1 class="auth__heading">Login into your account</h1>
+
+  <form class="auth__form" (ngSubmit)="onSubmit()" [formGroup]="form" novalidate>
+
+    <div class="auth__field">
+      <label for="email" class="auth__label">Email</label>
+      <input id="email" class="auth__input" formControlName="email" required type="email" />
+      <div class="auth__error" *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)" role="alert">
+        {{ getEmailError() }}
+      </div>
+    </div>
+
+    <div class="auth__field">
+      <label for="password" class="auth__label">Password</label>
+      <input id="password" class="auth__input" formControlName="password" required  type="password" />
+    </div>
+
+    <button class="auth__button" type="submit" [disabled]="form.invalid">
+      Login
+    </button>
+
+    <p>Do not have an account? <a href="http://localhost:3000/auth/signup">Sign up</a></p>
+  </form>
+</div>
