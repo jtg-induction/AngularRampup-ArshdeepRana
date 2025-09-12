@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { environment } from 'environments/environments';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { User } from '@shared/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -23,7 +24,7 @@ export class AuthService {
     );
   }
 
-  login(payload: {email: string, password: string }) : Observable<any> {
+  login(payload: {email: string, password: string }) : Observable<User> {
     return this.http.post(`${this.apiUrl}/login`, payload).pipe(
       tap((res: any) => {
         if(res.accessToken) {

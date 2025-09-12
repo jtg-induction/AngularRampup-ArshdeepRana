@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { emailValidator } from '@shared/validators/';
-import { ValidationMessages } from '@shared/constants/';
+import { ValidationMessages } from 'app/constants';
 import { AuthService , UserService} from '@shared/services/';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.html',
+  templateUrl: './login.component.html',
   styleUrls: ['../auth.scss']
 })
 
@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
     private authService: AuthService,
     private router: Router
   ) {}
@@ -75,7 +74,9 @@ export class LoginComponent implements OnInit {
         this.isSubmitting = false;
         this.router.navigate(['/dashboard']);
       },
-      error: () => {
+      error: (err) => {
+        console.log('erorr', err);
+        
         this.errorMessage = 'Login failed. Please try again.'
         this.isSubmitting = false;
       }

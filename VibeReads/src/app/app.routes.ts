@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from '@pages/dashboard/dashboard.component';
+import { DashboardComponent } from '@modules/dashboard/dashboard.component';
 import { AuthGuard } from '@shared/guards/auth.guard';
 
 export const appRoutes: Routes = [
