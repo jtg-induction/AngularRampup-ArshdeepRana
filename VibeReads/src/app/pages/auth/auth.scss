@@ -1,0 +1,150 @@
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+.auth {
+  @include flex(column, center, center);
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $text-color;
+  overflow: hidden;
+  position: relative;
+
+  
+  // heading 
+  &__heading {
+    font-size: $font-2xl;
+    font-weight: 700;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    animation: bounceIn 1.2s ease forwards;
+  }
+
+  // form
+  &__form {
+    @include flex(column, center, center, 1rem);
+    background-color: $background-color;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeUp 1s ease forwards;
+  }
+
+  // field
+  &__field {
+    background-color: white;
+    @include flex(column, flex-start, flex-start, 0.5rem);
+    width: 100%;
+  }
+
+  // label
+  &__label {
+    font-size: $font-sm;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  // input
+  &__input {
+    padding: $spacing-sm;
+    border: 2px solid lighten($primary-color, 40%);
+    border-radius: 0.75rem;
+    font-size: $font-base;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 4px rgba($primary-color, 0.2);
+      transform: scale(1.02);
+    }
+
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+
+  // error
+  &__error {
+    color: $danger-color;
+    font-size: $font-xs;
+    margin-top: 0.25rem;
+    animation: shake 0.3s ease;
+  }
+
+  // button
+  &__button {
+    margin-top: $spacing-sm;
+    padding: $spacing-sm $spacing-lg;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: $font-base;
+
+
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 20px rgba($primary-color, 0.4);
+    }
+
+    &:disabled {
+      background: lighten($primary-color, 30%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Responsive design
+@include respond-to(sm) {
+  .auth__form {
+    padding: 1rem;
+  }
+}
+
+@include respond-to(md) {
+  .auth__heading {
+    font-size: $font-3xl;
+  }
+  .auth__form {
+    padding: 2rem;
+  }
+}
+
+@include respond-to(lg) {
+  .auth__form {
+    max-width: 500px;
+    padding: 1.5rem;
+  }
+}
+
+// Animations
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}

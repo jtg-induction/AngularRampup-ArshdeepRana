@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "prashant@gmail.com",
+      "password": "$2a$10$wfpmOdK8h6jMgAMtwW2/Ke58x905wrHVdSj7xmdY/v6aZYzgVLcsS",
+      "username": "Prashant",
+      "id": 1
+    },
+    {
+      "email": "arsh@gmail.com",
+      "password": "$2a$10$mNbq8o2OzzFI0Xqbheae.uBDVJgMHLI/GukOtFZ/JKYB5j8hsNbJS",
+      "username": "Arsh",
+      "id": 2
+    },
+    {
+      "email": "nikhil@gmail.com",
+      "password": "$2a$10$Zccl3LntsEVztLlM3LKhM.gc0H1sQSgC9wkVxnPOiThmBxf2qsEnC",
+      "username": "Nikhil",
+      "id": 3
+    },
+    {
+      "email": "siddharth@gmail.com",
+      "password": "$2a$10$XQYq39Eg3JZhUtq2AxdxoeTPHRlSD0xYxmi7URupf.TZL5nl3LHbS",
+      "username": "Siddharth",
+      "id": 4
+    }
+  ]
+}
