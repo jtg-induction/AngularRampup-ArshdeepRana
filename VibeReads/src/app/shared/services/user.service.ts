@@ -3,10 +3,11 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '@shared/models';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'environments/environments';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/users';
+  private apiUrl =  environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 

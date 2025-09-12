@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { strongPasswordValidator ,uniqueUsernameValidator, uniqueEmailValidator, emailValidator } from '@shared/validators/';
-import { ValidationMessages } from '@shared/constants/';
+import { ValidationMessages } from 'app/constants';
 import { AuthService , UserService} from '@shared/services/';
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './signup.html',
+  templateUrl: './signup.component.html',
   styleUrls: ['../auth.scss']
 })
 
@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
     this.form = this.fb.group({
       username: [
         '',
-        [Validators.required, Validators.minLength(3), Validators.maxLength(15)],
+        [Validators.required, Validators.minLength(3), Validators.maxLength(20)],
         [uniqueUsernameValidator(this.userService)]
       ],
       email: [

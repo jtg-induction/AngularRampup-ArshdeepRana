@@ -1,6 +1,4 @@
-@import 'variables';
-@import 'mixins';
-@import 'typography';
+@import 'styles.scss';
 
 .auth {
   @include flex(column, center, center);

@@ -1,4 +1,5 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { RegularExpressions } from 'app/constants/';
 
 export function strongPasswordValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -8,12 +9,12 @@ export function strongPasswordValidator(): ValidatorFn {
       return null; 
     }
 
-    const hasUpper = /[A-Z]/.test(value);
-    const hasLower = /[a-z]/.test(value);
-    const hasNumber = /\d/.test(value);
+    const hasUpper = RegularExpressions.HAS_UPPER.test(value);
+    const hasLower = RegularExpressions.HAS_LOWER.test(value);
+    const hasNumber = RegularExpressions.HAS_NUMBER.test(value);
 
     // match non-alphanumeric chars
-    const specialMatches = value.match(/[^A-Za-z0-9]/g);
+    const specialMatches = value.match(RegularExpressions.HAS_SPECIALS);
     const specialCount = specialMatches ? specialMatches.length : 0;
 
     const passwordValid = hasUpper && hasLower && hasNumber && specialCount >= 2;

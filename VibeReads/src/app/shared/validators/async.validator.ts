@@ -1,13 +1,16 @@
 import { AbstractControl, AsyncValidatorFn } from '@angular/forms';
-import { UserService } from '@shared/services/user.service';
+import { UserService } from '@shared/services';
 import { switchMap, map, catchError } from 'rxjs/operators';
 import { of, timer } from 'rxjs';
+
+const TIMER_DURATION = 500;
+
 
 export function uniqueUsernameValidator(userService: UserService): AsyncValidatorFn {
   return (control: AbstractControl) => {
     if (!control.value) return of(null);
 
-    return timer(500).pipe(
+    return timer(TIMER_DURATION).pipe(
       switchMap(() =>
         userService.checkUsername(control.value).pipe(
           map(isUnique => (isUnique ? null : { usernameTaken: true })),
@@ -22,7 +25,7 @@ export function uniqueEmailValidator(userService: UserService): AsyncValidatorFn
   return (control: AbstractControl) => {
     if (!control.value) return of(null);
 
-    return timer(500).pipe(
+    return timer(TIMER_DURATION).pipe(
       switchMap(() =>
         userService.checkEmail(control.value).pipe(
           map(isUnique => (isUnique ? null : { emailTaken: true })),

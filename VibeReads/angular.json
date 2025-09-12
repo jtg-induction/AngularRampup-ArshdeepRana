@@ -25,11 +25,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/styles/styles.scss"
+              "src/styles/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/app/styles"
+                "src/styles"
               ]
             },
             "scripts": [],
@@ -94,11 +94,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/styles/styles.scss"
+              "src/styles/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/app/styles"
+                "src/styles"
               ]
             },
             "scripts": []
