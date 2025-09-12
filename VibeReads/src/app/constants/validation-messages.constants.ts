@@ -1,7 +1,7 @@
 export class ValidationMessages {
   static readonly USERNAME_REQUIRED = 'Username is required 😄';
   static readonly USERNAME_MIN = 'Minimum 3 characters';
-  static readonly USERNAME_MAX = "Maximum 15 characters allowed"
+  static readonly USERNAME_MAX = "Maximum 20 characters allowed"
   static readonly USERNAME_TAKEN = 'Username is already taken 😭'
 
   static readonly EMAIL_REQUIRED = 'Email is required 😄';
