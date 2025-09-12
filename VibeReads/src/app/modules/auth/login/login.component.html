@@ -1,5 +1,8 @@
 <div class="auth">
   <h1 class="auth__heading">Login into your account</h1>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
 
   <form class="auth__form" (ngSubmit)="onSubmit()" [formGroup]="form" novalidate>
 
