@@ -15,7 +15,5 @@ export class ValidationMessages {
   static readonly PASSWORD_LOWER = 'Password must contain at least one lowercase letter 🔡';
   static readonly PASSWORD_NUMBER = 'Password must contain at least one number 🔢';
   static readonly PASSWORD_SPECIAL = 'Password must contain at least 2 special characters ⭐💰';
-  static readonly PASSWORD_WEAK = 'Password is not strong enough 😤';
-
-  
+  static readonly PASSWORD_WEAK = 'Password is not strong enough 😤'; 
 }

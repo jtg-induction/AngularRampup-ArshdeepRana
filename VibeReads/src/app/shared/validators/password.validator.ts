@@ -1,4 +1,5 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+
 import { RegularExpressions } from 'app/constants/';
 
 export function strongPasswordValidator(): ValidatorFn {

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { strongPasswordValidator ,uniqueUsernameValidator, uniqueEmailValidator, emailValidator } from '@shared/validators/';
+
 import { ValidationMessages } from 'app/constants';
+
 import { AuthService , UserService} from '@shared/services/';
+import { strongPasswordValidator ,uniqueUsernameValidator, uniqueEmailValidator, emailValidator } from '@shared/validators/';
 
 @Component({
   selector: 'app-signup',

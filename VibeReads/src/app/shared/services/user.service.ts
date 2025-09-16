@@ -1,9 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import { environment } from 'environments/environments';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
 import { User } from '@shared/models';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'environments/environments';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {

@@ -1,15 +1,24 @@
 // Colors
-$primary-color: #4f46e5;
-$secondary-color: #06b6d4;
-$danger-color: #ef4444;
-$background-color: #f9fafb;
-$text-color: #111827;
+$neon-blue: #4f46e5;
+$iris-blue: #06b6d4;
+$coral-red: #ef4444;
+$alice-blue: #f9fafb;
+$black-russian: #111827;
+
+// Colors
+$primary-color: $neon-blue;
+$secondary-color: $iris-blue;
+$danger-color: $coral-red;
+$background-color: $alice-blue;
+$text-color: $black-russian;
 
 // Breakpoints
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoints: (
+    "sm": 640px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1280px
+);
 
 // Spacing scale
 $spacing-xs: 4px;
@@ -18,14 +27,13 @@ $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
 
-// Font Sizes
-$font-xs: 0.75rem;
-$font-sm: 0.875rem;
-$font-base: 1rem;
-$font-lg: 1.125rem;
-$font-xl: 1.25rem;
-$font-2xl: 1.5rem;
-$font-3xl: 1.875rem;
-$font-4xl: 2.25rem;
-$font-5xl: 3rem;
-$font-6xl: 3.75rem;
+// Font weights
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
