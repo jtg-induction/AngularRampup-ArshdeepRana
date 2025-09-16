@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from '@core/components/app.component';
 import { CoreModule } from '@core/core.module';
+
 import { SharedModule } from '@shared/shared.module';
+
 import { appRoutes } from './app.routes';
 
 @NgModule({
@@ -17,7 +19,6 @@ import { appRoutes } from './app.routes';
     SharedModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

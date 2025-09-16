@@ -1,7 +1,9 @@
 import { AbstractControl, AsyncValidatorFn } from '@angular/forms';
-import { UserService } from '@shared/services';
-import { switchMap, map, catchError } from 'rxjs/operators';
+
 import { of, timer } from 'rxjs';
+import { switchMap, map, catchError } from 'rxjs/operators';
+
+import { UserService } from '@shared/services';
 
 const TIMER_DURATION = 500;
 

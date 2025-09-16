@@ -26,6 +26,53 @@ export default [
       'import/no-cycle': ['error', { maxDepth: Infinity }],
       '@typescript-eslint/no-unused-vars': ['warn'],
       '@typescript-eslint/no-explicit-any': 'off',
+
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+            'object',
+            'type',
+          ],
+          pathGroups: [
+            {
+              pattern: '@angular/**',
+              group: 'builtin',
+              position: 'before',
+            },
+            {
+              pattern: '@core/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@shared/**',
+              group: 'internal',
+              position: 'after',
+            },
+            {
+              pattern: '@pages/**',
+              group: 'internal',
+              position: 'after',
+            },
+            {
+              pattern: '@styles/**',
+              group: 'internal',
+              position: 'after',
+            }
+          ],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+          'newlines-between': 'always',
+        },
+      ],
     },
   },
 ];

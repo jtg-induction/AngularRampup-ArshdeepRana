@@ -12,8 +12,8 @@
   
   // heading 
   &__heading {
-    font-size: $font-2xl;
-    font-weight: 700;
+    font-size: toRem(28px);
+    font-weight: $font-weight-bold;
     margin-bottom: $spacing-sm;
     text-align: center;
     color: white;
@@ -42,8 +42,8 @@
 
   // label
   &__label {
-    font-size: $font-sm;
-    font-weight: 600;
+    font-size: toRem(12px);
+    font-weight: $font-weight-semi-bold;
     color: $text-color;
   }
 
@@ -52,7 +52,7 @@
     padding: $spacing-sm;
     border: 2px solid lighten($primary-color, 40%);
     border-radius: 0.75rem;
-    font-size: $font-base;
+    font-size: toRem(16px);
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -73,7 +73,7 @@
   // error
   &__error {
     color: $danger-color;
-    font-size: $font-xs;
+    font-size: toRem(12px);
     margin-top: 0.25rem;
     animation: shake 0.3s ease;
   }
@@ -84,14 +84,14 @@
     padding: $spacing-sm $spacing-lg;
     background: linear-gradient(90deg, $primary-color, $secondary-color);
     color: white;
-    font-weight: 600;
+    font-weight: $font-weight-semi-bold;
     border: none;
     border-radius: 999px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    font-size: $font-base;
+    font-size: toRem(16px);
 
 
     &:hover {
@@ -106,17 +106,12 @@
   }
 }
 
-// Responsive design
-@include respond-to(sm) {
-  .auth__form {
-    padding: 1rem;
-  }
-}
-
+// Responsiveness
 @include respond-to(md) {
   .auth__heading {
-    font-size: $font-3xl;
+    font-size: toRem(32px);
   }
+
   .auth__form {
     padding: 2rem;
   }
