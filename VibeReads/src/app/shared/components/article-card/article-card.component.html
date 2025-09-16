@@ -1,0 +1,14 @@
+<div class="article-card" (click)="goToDetails()">
+  <div class="author">{{ author }}</div>
+  <h2 class="title">{{ title }}</h2>
+  <p class="description">{{ description }}</p>
+  <div class="tags-container">
+    <span 
+      *ngFor="let tag of tags | slice:0:3; let i = index" 
+      [style.backgroundColor]="tagColors[i]"
+      class="tag"
+    >
+      {{ tag }}
+    </span>
+  </div>
+</div>
