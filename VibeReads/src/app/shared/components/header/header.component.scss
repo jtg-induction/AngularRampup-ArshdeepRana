@@ -54,6 +54,21 @@
             transform: scale(0.97);
           }
         }
+
+        .icon-btn
+        {
+          background-color: inherit;
+          border: none;
+          cursor: pointer;
+          color: $primary-color;
+
+          &:hover
+          {
+            color: $secondary-color;
+            transition: color 0.3s ease;
+
+          }
+        }
       }
     }
   }

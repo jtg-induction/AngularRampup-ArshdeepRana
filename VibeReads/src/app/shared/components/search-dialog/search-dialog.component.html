@@ -1,0 +1,35 @@
+<div class="dialog-header">
+  <h2>🔍 Search Authors</h2>
+  <button class="close-btn" (click)="close()">✖</button>
+</div>
+
+<div mat-dialog-content class="search-dialog">
+  <form (ngSubmit)="onSubmit()" class="search-form">
+    <input
+      type="text"
+      placeholder="Enter author name"
+      [(ngModel)]="query"
+      name="query"
+      required
+    />
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="results">
+    <div *ngIf="isLoading">⏳ Searching...</div>
+
+    <ul *ngIf="!isLoading && articles.length > 0">
+      <li
+        *ngFor="let article of articles"
+        (click)="goToArticle(article.id)"
+        class="result-item"
+      >
+        <strong>{{ article.title }}</strong> — {{ article.author }}
+      </li>
+    </ul>
+
+    <div *ngIf="!isLoading && hasSearched && articles.length === 0">
+      😢 No articles found for "{{ query }}"
+    </div>
+  </div>
+</div>

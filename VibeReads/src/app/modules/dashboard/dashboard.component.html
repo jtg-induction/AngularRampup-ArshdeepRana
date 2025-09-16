@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div *ngIf="articles.length === 0" class="empty-message">
+  No articles found.
+</div>
+
+<div class="articles-container">
+  <app-article-card
+    *ngFor="let article of articles"
+    [id]="article.id"
+    [title]="article.title"
+    [author]="article.author"
+    [description]="article.description"
+    [tags]="article.tags"
+  ></app-article-card>
+</div>
+
+<div class="pagination-controls">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button
+    (click)="nextPage()"
+    [disabled]="currentPage >= totalPages"
+  >
+    Next
+  </button>
+</div>

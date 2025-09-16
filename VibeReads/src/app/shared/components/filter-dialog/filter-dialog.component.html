@@ -1,0 +1,33 @@
+<div class="dialog-header">
+  <h2>🧩 Filter Articles</h2>
+  <button class="close-btn" (click)="close()">✖</button>
+</div>
+
+<div mat-dialog-content class="filter-dialog">
+  <div class="filter-section">
+    <h3>📅 Date Range</h3>
+    <div class="date-filters">
+      <input type="date" [(ngModel)]="startDate" />
+      <span>to</span>
+      <input type="date" [(ngModel)]="endDate" />
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <h3>🏷️ Tags</h3>
+    <div class="tags">
+      <span
+        *ngFor="let tag of availableTags"
+        (click)="toggleTag(tag)"
+        [class.selected]="selectedTags.includes(tag)"
+      >
+        {{ tag }}
+      </span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="clear-btn" (click)="clearFilters()">Clear</button>
+    <button class="apply-btn" (click)="applyFilters()">Apply</button>
+  </div>
+</div>
