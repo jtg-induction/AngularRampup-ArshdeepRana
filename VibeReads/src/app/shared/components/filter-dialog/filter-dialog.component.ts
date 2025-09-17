@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { environment } from 'environments/environments';
 
 @Component({
   selector: 'app-filter-dialog',
@@ -17,15 +18,13 @@ export class FilterDialogComponent implements OnInit {
   selectedTags: string[] = [];
   availableTags: string[] = [];
 
-  private apiUrl = 'http://localhost:3000/articles';
-
   constructor(
     private dialogRef: MatDialogRef<FilterDialogComponent>,
     private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>(this.apiUrl).subscribe({
+    this.http.get<any[]>(environment.apiUrl).subscribe({
       next: (articles) => {
         const tags = articles.flatMap(a => a.tags || []);
         this.availableTags = [...new Set(tags)];
