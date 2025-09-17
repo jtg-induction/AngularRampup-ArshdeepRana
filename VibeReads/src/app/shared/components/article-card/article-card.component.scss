@@ -17,21 +17,21 @@
   }
 
   .author {
-    font-size: $font-sm;
+    font-size: toRem(14px);
     color: $secondary-color;
     margin-bottom: $spacing-sm;
   }
 
   .title {
-    font-size: $font-xl;
-    font-weight: 700;
+    font-size: toRem(22px);
+    font-weight: $font-weight-bold;
     color: $text-color;
     margin-bottom: $spacing-sm;
     @include line-clamp(1);
   }
 
   .description {
-    font-size: $font-base;
+    font-size: toRem(16px);
     color: #6b7280;
     @include line-clamp(1);
   }
@@ -63,8 +63,8 @@
   margin-bottom: $spacing-sm;
   border-radius: 12px;
   color: white;
-  font-size: $font-sm;
-  font-weight: 500;
+  font-size: toRem(16px);
+  font-weight: $font-weight-medium;
   user-select: none;
   cursor: default;
 }

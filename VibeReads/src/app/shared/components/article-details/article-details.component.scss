@@ -11,8 +11,8 @@
   animation: fadeUp 0.6s ease-out;
 
   h1 {
-    font-size: $font-4xl;
-    font-weight: 800;
+    font-size: toRem(32px);
+    font-weight: $font-weight-extra-bold;
     margin-bottom: $spacing-md;
     color: $primary-color;
     line-height: 1.2;
@@ -20,7 +20,7 @@
   }
 
   p {
-    font-size: $font-base;
+    font-size: toRem(16px);
     line-height: 1.7;
     color: $text-color;
     margin-bottom: $spacing-md;
@@ -36,9 +36,9 @@
 
     span {
       background: $primary-color;
-      color: #fff;
-      font-size: $font-sm;
-      font-weight: 400;
+      color: white;
+      font-size: toRem(14px);
+      font-weight: $font-weight-light;
       padding: $spacing-xs $spacing-md;
       border-radius: 9999px;
       letter-spacing: 0.5px;
@@ -62,7 +62,7 @@
 
   // Article body styles
   .body {
-    font-size: $font-base;
+    font-size: toRem(16px);
     line-height: 1.8;
     color: darken($text-color, 10%);
     margin-top: $spacing-lg;
@@ -70,13 +70,13 @@
     h2, h3, h4 {
       margin-top: $spacing-lg;
       margin-bottom: $spacing-sm;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       color: $primary-color;
     }
 
-    h2 { font-size: $font-2xl; }
-    h3 { font-size: $font-xl; }
-    h4 { font-size: $font-lg; }
+    h2 { font-size: toRem(24px); }
+    h3 { font-size: toRem(20px); }
+    h4 { font-size: toRem(18px); }
 
     ul, ol {
       margin: $spacing-md $spacing-lg;
@@ -98,7 +98,7 @@
       background: $background-color;
       padding: 2px 6px;
       border-radius: 4px;
-      font-size: $font-sm;
+      font-size: toRem(14px);
       color: $danger-color;
     }
 
@@ -107,7 +107,7 @@
       padding: $spacing-md;
       border-radius: 12px;
       overflow-x: auto;
-      font-size: $font-sm;
+      font-size: toRem(14px);
     }
   }
 }
@@ -129,33 +129,33 @@
   .article-details {
     padding: $spacing-lg;
 
-    h1 { font-size: $font-2xl; }
-    .body { font-size: $font-sm; }
+    h1 { font-size: toRem(22px); }
+    .body { font-size: toRem(14px); }
   }
 }
 
 @include respond-to(md) {
   .article-details {
-    h1 { font-size: $font-4xl; }
+    h1 { font-size: toRem(32px); }
   }
 }
 
 @include respond-to(lg) {
   .article-details {
-    h1 { font-size: $font-5xl; }
-    .body { font-size: $font-base; }
+    h1 { font-size: toRem(34px); }
+    .body { font-size: toRem(16px); }
   }
 }
 
 .description {
-  font-size: $font-base;
+  font-size: toRem(16px);
   line-height: 1.6;
   color: $text-color;
   margin-bottom: $spacing-md;
 
   .toggle {
     color: $primary-color;
-    font-weight: 600;
+    font-weight: $font-weight-semi-bold;
     cursor: pointer;
     margin-left: $spacing-xs;
     @include transition(color, 0.2s);
