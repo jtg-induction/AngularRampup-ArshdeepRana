@@ -6,7 +6,7 @@ export class ValidationMessages {
 
   static readonly EMAIL_REQUIRED = 'Email is required 😄';
   static readonly EMAIL_INVALID = 'Invalid email format 😒';
-  static readonly EMAIL_EXISTS = 'Username is already taken 😭';
+  static readonly EMAIL_EXISTS = 'Email already exists 😭';
 
   static readonly PASSWORD_REQUIRED = 'Password is required 😄';
   static readonly PASSWORD_MIN = 'Password must be at least 8 characters long ';

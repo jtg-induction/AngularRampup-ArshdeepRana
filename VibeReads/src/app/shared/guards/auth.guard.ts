@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { AuthService } from '@shared/services'; 
+
 import { jwtDecode } from 'jwt-decode';
+
+import { AuthService } from '@shared/services'; 
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +29,7 @@ export class AuthGuard implements CanActivate {
         this.router.navigate(['/login']);
         return false; // Token is expired
         }
-    } catch (e) {
+    } catch {
         this.router.navigate(['/login']);
         return false; // Token is invalid
     }

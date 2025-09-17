@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { emailValidator } from '@shared/validators/';
-import { ValidationMessages } from 'app/constants';
-import { AuthService , UserService} from '@shared/services/';
 import { Router } from '@angular/router';
+
+import { ValidationMessages } from 'app/constants';
+
+import { AuthService } from '@shared/services/';
+import { emailValidator } from '@shared/validators/';
+
 
 @Component({
   selector: 'app-login',

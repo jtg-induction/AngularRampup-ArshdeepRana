@@ -14,13 +14,13 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   checkUsername(username: string): Observable<boolean> {
-    return this.http.get<User[]>(`${this.apiUrl}?username=${username}`).pipe(
+    return this.http.get<User[]>(`${this.apiUrl}/users?username=${username}`).pipe(
       map(users => users.length === 0)
     );
   }
 
   checkEmail(email: string): Observable<boolean> {
-    return this.http.get<User[]>(`${this.apiUrl}?email=${email}`).pipe(
+    return this.http.get<User[]>(`${this.apiUrl}/users?email=${email}`).pipe(
       map(users => users.length === 0)
     );
   }

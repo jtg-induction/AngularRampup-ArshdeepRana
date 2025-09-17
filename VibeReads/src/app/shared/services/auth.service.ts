@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Router } from '@angular/router';
 import { environment } from 'environments/environments';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+
 import { User } from '@shared/models';
 
 @Injectable({ providedIn: 'root' })
@@ -33,6 +33,4 @@ export class AuthService {
       })
     )
   }
-
-  
 }
