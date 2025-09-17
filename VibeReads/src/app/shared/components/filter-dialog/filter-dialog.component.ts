@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-filter-dialog',

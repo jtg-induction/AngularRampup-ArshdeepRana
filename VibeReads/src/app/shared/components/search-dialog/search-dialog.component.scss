@@ -10,15 +10,15 @@
 
   h2 {
     margin: 0;
-    font-size: $font-xl;
-    font-weight: 600;
+    font-size: toRem(26px);
+    font-weight: $font-weight-semi-bold;
     color: $text-color;
   }
 
   .close-btn {
     background: none;
     border: none;
-    font-size: $font-xl;
+    font-size: toRem(22px);
     cursor: pointer;
     padding: $spacing-xs $spacing-sm;
     border-radius: $spacing-sm;
@@ -41,6 +41,7 @@
 
 .search-form {
   display: flex;
+  flex-direction: column;
   gap: $spacing-sm;
 
   input {
@@ -48,7 +49,7 @@
     padding: $spacing-sm $spacing-md;
     border: 1px solid lighten($text-color, 60%);
     border-radius: $spacing-sm;
-    font-size: $font-base;
+    font-size: toRem(16px);
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 
@@ -62,7 +63,7 @@
     padding: $spacing-sm $spacing-md;
     background: $primary-color;
     color: #fff;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
     border: none;
     border-radius: $spacing-sm;
     cursor: pointer;
@@ -82,8 +83,8 @@
   margin-top: $spacing-sm;
 
   h3 {
-    font-size: $font-base;
-    font-weight: 600;
+    font-size: toRem(16px);
+    font-weight: $font-weight-semi-bold;
     margin-bottom: $spacing-xs;
     color: darken($text-color, 20%);
   }
@@ -97,11 +98,18 @@
   li {
     padding: $spacing-xs 0;
     border-bottom: 1px solid lighten($text-color, 70%);
-    font-size: $font-sm;
+    font-size: toRem(22px);
     color: $text-color;
 
     &:last-child {
       border-bottom: none;
     }
+  }
+}
+
+@include respond-to(md)
+{
+  .search-form{
+    flex-direction: row;
   }
 }

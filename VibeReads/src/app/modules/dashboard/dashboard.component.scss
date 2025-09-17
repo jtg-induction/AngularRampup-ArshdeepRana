@@ -23,7 +23,7 @@
 
 .empty-message {
   text-align: center;
-  font-size: $font-lg;
+  font-size: toRem(18px);
   color: #9ca3af;
   margin-top: $spacing-xl;
 }
@@ -41,7 +41,7 @@
     border: none;
     padding: $spacing-sm $spacing-md;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: $font-weight-semi-bold;
     cursor: pointer;
     @include transition(background-color, 0.3s);
 
@@ -56,8 +56,8 @@
   }
 
   span {
-    font-weight: 600;
-    font-size: $font-base;
+    font-weight: $font-weight-semi-bold;
+    font-size: toRem(16px);
     color: $text-color;
   }
 }

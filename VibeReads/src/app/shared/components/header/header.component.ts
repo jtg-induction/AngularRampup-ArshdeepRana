@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import { SearchDialogComponent } from '../search-dialog/search-dialog.component';
-import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
+
 import { FilterService } from '@shared/services/filter.service';
+
+import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
+import { SearchDialogComponent } from '../search-dialog/search-dialog.component';
 
 @Component({
   selector: 'app-header',

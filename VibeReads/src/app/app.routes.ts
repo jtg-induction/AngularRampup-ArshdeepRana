@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '@modules/dashboard/dashboard.component';
+
 import { ArticleDetailsComponent } from '@shared/components/article-details/article-details.component';
 import { AuthGuard } from '@shared/guards/auth.guard';
 

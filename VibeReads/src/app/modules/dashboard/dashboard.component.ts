@@ -1,13 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { HeaderComponent } from '@shared/components/header/header.component';
-import { ArticleCardComponent } from '@shared/components/article-card/article-card.component';
-import { environment } from 'environments/environments';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { FilterService, ArticleFilters } from '@shared/services/filter.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { environment } from 'environments/environments';
 import { Subscription } from 'rxjs';
+
+import { ArticleCardComponent } from '@shared/components/article-card/article-card.component';
+import { HeaderComponent } from '@shared/components/header/header.component';
+import { FilterService, ArticleFilters } from '@shared/services/filter.service';
+
 
 interface Article {
   id: number;
