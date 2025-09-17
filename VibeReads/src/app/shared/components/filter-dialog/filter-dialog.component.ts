@@ -18,13 +18,14 @@ export class FilterDialogComponent implements OnInit {
   selectedTags: string[] = [];
   availableTags: string[] = [];
 
+
   constructor(
     private dialogRef: MatDialogRef<FilterDialogComponent>,
     private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>(environment.apiUrl).subscribe({
+    this.http.get<any[]>(`${environment.apiUrl}/articles`).subscribe({
       next: (articles) => {
         const tags = articles.flatMap(a => a.tags || []);
         this.availableTags = [...new Set(tags)];
