@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-article-form 
+      [initialData]="articleData"
+      submitLabel="Update"
+      (formSubmit)="handleUpdate($event)">
+</app-article-form>
+<div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>

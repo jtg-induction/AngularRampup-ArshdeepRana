@@ -4,19 +4,19 @@
       "email": "nikhil@gmail.com",
       "password": "$2a$10$77PnVIedOS2rw3ijecqx8.GDOT6vvk4ihbGudTyQpqG4tZ4/MBXpC",
       "username": "Nikhil",
-      "email": "nikhil@gmail.com",
-      "password": "$2a$10$77PnVIedOS2rw3ijecqx8.GDOT6vvk4ihbGudTyQpqG4tZ4/MBXpC",
-      "username": "Nikhil",
       "id": 1
     },
     {
       "email": "askshay@gmail.com",
       "password": "$2a$10$VouNdxn6lO4LqKi8hKTHF.9sdbFn0V49QM9H6LfwXaoY7BARMiVmS",
       "username": "Akshay",
-      "email": "askshay@gmail.com",
-      "password": "$2a$10$VouNdxn6lO4LqKi8hKTHF.9sdbFn0V49QM9H6LfwXaoY7BARMiVmS",
-      "username": "Akshay",
       "id": 2
+    },
+    {
+      "email": "harshit@gmail.com",
+      "password": "$2a$10$/8nlFq.f1w12cyYPbLkFROpCylU/.uOHygvuzmA5ZdJe1/8iS1GAi",
+      "username": "Harshit",
+      "id": 3
     }
   ],
   "articles": [
@@ -280,6 +280,29 @@
       ],
       "id": 20,
       "date": "2025-06-11T09:10:00Z"
+    },
+    {
+      "title": "I am Harry, Yes",
+      "description": "My name is Harry., Yes",
+      "body": "Actually my real name is Harshit, but people call me Harry., Yes",
+      "tags": [
+        "Harry",
+        "Yes"
+      ],
+      "author": "Harshit",
+      "date": "2025-09-18T02:51:40.145Z",
+      "id": 21
+    },
+    {
+      "title": "This is my Second Article.",
+      "description": "Second Article 😎",
+      "body": "My first Article went viral. So here is Article number 2.",
+      "tags": [
+        "Viral"
+      ],
+      "author": "Harshit",
+      "date": "2025-09-18T02:56:19.657Z",
+      "id": 22
     }
   ]
 }

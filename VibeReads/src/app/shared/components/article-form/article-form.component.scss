@@ -1,0 +1,53 @@
+@import 'styles.scss';
+
+.article-form-container {
+  background: $background-color;
+  padding: $spacing-lg;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  form {
+    @include flex(column, flex-start, stretch, $spacing-md);
+
+    label {
+      font-weight: $font-weight-semi-bold;
+      margin-bottom: $spacing-sm;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+
+      input, textarea {
+        padding: $spacing-sm;
+        border: 1px solid lighten($text-color, 40%);
+        border-radius: 8px;
+        font-size: toRem(16px);
+      }
+    }
+
+    button {
+      background: $primary-color;
+      color: white;
+      padding: $spacing-sm $spacing-md;
+      border-radius: 8px;
+      border: none;
+      font-weight: $font-weight-bold;
+      cursor: pointer;
+      @include transition(all);
+
+      &:disabled {
+        background: lighten($primary-color, 30%);
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background: darken($primary-color, 10%);
+      }
+    }
+
+    .error {
+      color: $danger-color;
+      font-size: toRem(14px);
+    }
+  }
+}

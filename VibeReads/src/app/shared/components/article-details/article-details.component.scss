@@ -10,13 +10,46 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   animation: fadeUp 0.6s ease-out;
 
-  h1 {
-    font-size: toRem(32px);
-    font-weight: $font-weight-extra-bold;
+  .title-row {
+    @include flex(row, space-between, center);
     margin-bottom: $spacing-md;
-    color: $primary-color;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+
+    h1 {
+      flex: 1;
+      font-size: toRem(32px);
+      font-weight: $font-weight-extra-bold;
+      margin-bottom: 0;
+      color: $primary-color;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .edit-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: $spacing-xs;
+      border-radius: 50%;
+      color: $primary-color;
+      @include transition(all, 0.2s);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      mat-icon {
+        font-size: toRem(22px);
+      }
+
+      &:hover {
+        background: rgba($primary-color, 0.1);
+        transform: scale(1.1) rotate(-5deg);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
   }
 
   p {
@@ -60,7 +93,7 @@
     }
   }
 
-  // Article body styles
+    // Article body styles
   .body {
     font-size: toRem(16px);
     line-height: 1.8;

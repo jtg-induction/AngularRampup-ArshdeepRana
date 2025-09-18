@@ -1,0 +1,3 @@
+<app-header></app-header>
+<app-article-form (formSubmit)="handleSubmit($event)"></app-article-form>
+<div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>

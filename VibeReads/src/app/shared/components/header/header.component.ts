@@ -46,4 +46,8 @@ export class HeaderComponent {
       }
     });
   }
+
+  addArticle() {
+    this.router.navigate(['/add']);
+  }
 }
