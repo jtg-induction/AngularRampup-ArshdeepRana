@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ValidationMessages } from 'app/constants';
 
@@ -20,7 +21,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -100,6 +102,7 @@ export class SignupComponent implements OnInit {
     this.authService.register(this.form.value).subscribe({
       next : () => {
         this.isSubmitting = false;
+        this.router.navigate(['/dashboard']);
       },
       error: () => {
         this.errorMessage = 'Signup failed. Please try again.'

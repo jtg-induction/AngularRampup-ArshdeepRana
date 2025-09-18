@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { LoginComponent } from './login/login.components';
 import { SignupComponent } from './signup/signup.component';
 
-
 @NgModule({
-  declarations: [SignupComponent],
+  declarations: [SignupComponent, LoginComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     RouterModule.forChild([
       { path: 'signup', component: SignupComponent },
-      { path: '', redirectTo: 'signup', pathMatch: 'full' }
+      { path: 'login', component: LoginComponent },
     ])
   ]
 })
