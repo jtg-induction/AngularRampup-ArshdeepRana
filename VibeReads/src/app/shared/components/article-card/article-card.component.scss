@@ -1,0 +1,71 @@
+@import "styles.scss";
+
+.article-card {
+  background: white;
+  padding: $spacing-lg;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  @include transition(box-shadow, 0.3s, ease);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .author {
+    font-size: toRem(14px);
+    color: $secondary-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  .title {
+    font-size: toRem(22px);
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    margin-bottom: $spacing-sm;
+    @include line-clamp(1);
+  }
+
+  .description {
+    font-size: toRem(16px);
+    color: #6b7280;
+    @include line-clamp(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.article-card {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.tags-container {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 8px;
+  margin-bottom: $spacing-sm;
+  border-radius: 12px;
+  color: white;
+  font-size: toRem(16px);
+  font-weight: $font-weight-medium;
+  user-select: none;
+  cursor: default;
+}
+

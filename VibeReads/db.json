@@ -4,19 +4,19 @@
       "email": "nikhil@gmail.com",
       "password": "$2a$10$77PnVIedOS2rw3ijecqx8.GDOT6vvk4ihbGudTyQpqG4tZ4/MBXpC",
       "username": "Nikhil",
+      "email": "nikhil@gmail.com",
+      "password": "$2a$10$77PnVIedOS2rw3ijecqx8.GDOT6vvk4ihbGudTyQpqG4tZ4/MBXpC",
+      "username": "Nikhil",
       "id": 1
     },
     {
       "email": "askshay@gmail.com",
       "password": "$2a$10$VouNdxn6lO4LqKi8hKTHF.9sdbFn0V49QM9H6LfwXaoY7BARMiVmS",
       "username": "Akshay",
+      "email": "askshay@gmail.com",
+      "password": "$2a$10$VouNdxn6lO4LqKi8hKTHF.9sdbFn0V49QM9H6LfwXaoY7BARMiVmS",
+      "username": "Akshay",
       "id": 2
-    },
-    {
-      "email": "harshit@gmail.com",
-      "password": "$2a$10$nbBAWiNQobEzW1eUccTOSOV1tURP5sdG0kBXIjducB7pr0nCkBn9q",
-      "username": "Harshit",
-      "id": 3
     }
   ],
   "articles": [

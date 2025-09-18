@@ -1,0 +1,63 @@
+@import "styles.scss";
+
+:host {
+  display: block;
+  background-color: $background-color;
+  min-height: 100vh;
+  padding: $spacing-xl;
+}
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-lg;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  padding: $spacing-md $spacing-xs;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: toRem(18px);
+  color: #9ca3af;
+  margin-top: $spacing-xl;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $spacing-lg;
+  gap: $spacing-md;
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 6px;
+    font-weight: $font-weight-semi-bold;
+    cursor: pointer;
+    @include transition(background-color, 0.3s);
+
+    &:disabled {
+      background-color: #cbd5e1;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  span {
+    font-weight: $font-weight-semi-bold;
+    font-size: toRem(16px);
+    color: $text-color;
+  }
+}
