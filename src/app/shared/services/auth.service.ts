@@ -17,7 +17,7 @@ export class AuthService {
   register(payload: { username: string; email: string; password: string }): Observable<AuthResponse> {
     return this.http.post(`${this.apiUrl}/register`, payload).pipe(
       tap((res: AuthResponse) => {
-      if (res.accessToken) {
+        if (res.accessToken) {
           localStorage.setItem('token', res.accessToken);
         }
       })
