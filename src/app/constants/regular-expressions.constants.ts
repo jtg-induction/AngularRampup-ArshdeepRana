@@ -1,6 +1,6 @@
-export const RegularExpressions = {
+export const REGULAR_EXPRESSIONS = {
     // Email Regular expressions
-    EMAIL_REGX: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+    EMAIL_REGEX: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
 
     // Password Regular expressions
     HAS_UPPER: /[A-Z]/,

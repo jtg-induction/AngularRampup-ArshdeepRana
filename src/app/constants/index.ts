@@ -1,2 +1,2 @@
-export { ValidationMessages } from './validation-messages.constants';
-export { RegularExpressions } from './regular-expressions.constants';
+export { VALIDATION_MESSAGES } from './validation-messages.constants';
+export { REGULAR_EXPRESSIONS } from './regular-expressions.constants';

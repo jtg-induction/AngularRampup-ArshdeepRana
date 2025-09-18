@@ -1,6 +1,6 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
-import { RegularExpressions } from "app/constants";
+import { REGULAR_EXPRESSIONS } from "app/constants";
 
 export function emailValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
@@ -10,7 +10,7 @@ export function emailValidator(): ValidatorFn {
             return null;
         }
 
-        const isValid = RegularExpressions.EMAIL_REGX.test(value);
+        const isValid = REGULAR_EXPRESSIONS.EMAIL_REGEX.test(value);
 
         return isValid ? null : {
             validEmail: {

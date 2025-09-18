@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { ValidationMessages } from 'app/constants';
+import { VALIDATION_MESSAGES } from 'app/constants';
 
 import { AuthService } from '@shared/services/';
 import { emailValidator } from '@shared/validators/';
@@ -48,15 +48,15 @@ export class LoginComponent implements OnInit {
   getEmailError(): string {
     const c = this.f['email'];
     if (!c) return '';
-    if (c.hasError('required')) return ValidationMessages.EMAIL_REQUIRED;
-    if (c.hasError('email') || c.hasError('validEmail')) return ValidationMessages.EMAIL_INVALID;
+    if (c.hasError('required')) return VALIDATION_MESSAGES.EMAIL_REQUIRED;
+    if (c.hasError('email') || c.hasError('validEmail')) return VALIDATION_MESSAGES.EMAIL_INVALID;
     return '';
   }
 
   getPasswordError(): string {
     const c = this.f['password'];
     if (!c) return '';
-    if (c.hasError('required')) return ValidationMessages.PASSWORD_REQUIRED;
+    if (c.hasError('required')) return VALIDATION_MESSAGES.PASSWORD_REQUIRED;
     return '';
   }
 

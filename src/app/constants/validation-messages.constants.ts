@@ -1,4 +1,4 @@
-export const ValidationMessages = {
+export const VALIDATION_MESSAGES = {
   // Username related validation messages
   USERNAME_REQUIRED: 'Username is required 😄',
   USERNAME_MIN: 'Minimum 3 characters',
