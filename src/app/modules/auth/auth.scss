@@ -1,0 +1,169 @@
+@import 'styles.scss';
+
+.auth {
+  @include flex(column, center, center);
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $text-color;
+  overflow: hidden;
+  position: relative;
+
+  // heading 
+  &__heading {
+    font-size: toRem(28);
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+    color: $white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    animation: bounce-in 1.2s ease forwards;
+  }
+
+  // form
+  &__form {
+    @include flex(column, center, center, 1rem);
+    background-color: $background-color;
+    padding: toRem(16);
+    border-radius: toRem(16);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: toRem(400);
+    animation: fade-up 1s ease forwards;
+  }
+
+  // field
+  &__field {
+    background-color: $white;
+    @include flex(column, flex-start, flex-start, toRem(8));
+    width: 100%;
+  }
+
+  // label
+  &__label {
+    font-size: toRem(12);
+    font-weight: $font-weight-semi-bold;
+    color: $text-color;
+  }
+
+  // input
+  &__input {
+    padding: $spacing-sm;
+    border: 2px solid lighten($primary-color, 40%);
+    border-radius: toRem(12);
+    font-size: toRem(16);
+    width: 100%;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 4px rgba($primary-color, 0.2);
+      transform: scale(1.02);
+    }
+
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+
+  // error
+  &__error {
+    color: $danger-color;
+    font-size: toRem(12);
+    margin-top: toRem(6);
+    animation: shake 0.3s ease;
+  }
+
+  // button
+  &__button {
+    margin-top: $spacing-sm;
+    padding: $spacing-sm $spacing-lg;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: $white;
+    font-weight: $font-weight-semi-bold;
+    border: none;
+    border-radius: toRem(200);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: toRem(16);
+
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 20px rgba($primary-color, 0.4);
+    }
+
+    &:disabled {
+      background: lighten($primary-color, 30%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Responsiveness
+@include respond-to(md) {
+  .auth {
+    &__heading {
+      font-size: toRem(32);
+    }
+
+    &__form {
+      padding: toRem(32);
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .auth__form {
+    max-width: toRem(500);
+    padding: toRem(20);
+  }
+}
+
+// Animations
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}

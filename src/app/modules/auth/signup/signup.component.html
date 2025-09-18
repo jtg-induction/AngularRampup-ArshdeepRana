@@ -1,0 +1,37 @@
+<div class="auth">
+  <h1 class="auth__heading">Create an account</h1>
+
+  <form class="auth__form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div class="auth__field">
+      <label for="username" class="auth__label">Username</label>
+      <input id="username" class="auth__input" formControlName="username" required />
+      <div class="auth__error" *ngIf="f['username'].invalid && (f['username'].touched || f['username'].dirty)"
+        role="alert">
+        {{ getUsernameError() }}
+      </div>
+    </div>
+
+    <div class="auth__field">
+      <label for="email" class="auth__label">Email</label>
+      <input id="email" class="auth__input" formControlName="email" required type="email" />
+      <div class="auth__error" *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)" role="alert">
+        {{ getEmailError() }}
+      </div>
+    </div>
+
+    <div class="auth__field">
+      <label for="password" class="auth__label">Password</label>
+      <input id="password" class="auth__input" formControlName="password" required minlength="8" type="password" />
+      <div class="auth__error" *ngIf="f['password'].invalid && (f['password'].touched || f['password'].dirty)"
+        role="alert">
+        {{ getPasswordError() }}
+      </div>
+    </div>
+
+    <button class="button" type="submit" [disabled]="form.invalid">
+      Sign up
+    </button>
+
+    <p>Already have an account? <a href="http://localhost:4200/auth/login">Log In</a></p>
+  </form>
+</div>
