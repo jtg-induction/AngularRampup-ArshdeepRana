@@ -1,0 +1,81 @@
+.button {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: $white;
+    font-weight: $font-weight-semi-bold;
+    border: none;
+    border-radius: toRem(200);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: toRem(16);
+
+    &:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 20px rgba($primary-color, 0.4);
+    }
+
+    &:disabled {
+        background: lighten($primary-color, 30%);
+        cursor: not-allowed;
+    }
+
+    &--primary {
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
+        color: $white;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+
+    &--secondary {
+        background: $secondary-color;
+        color: $white;
+
+        &:hover {
+            background: darken($secondary-color, 10%);
+        }
+    }
+
+    &--danger {
+        background-color: $danger-color;
+        color: $white;
+        border-radius: 6px;
+        border: none;
+
+        &:hover {
+            background-color: darken($danger-color, 10%);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    &--small {
+        padding: $spacing-sm $spacing-md;
+        font-size: toRem(14);
+    }
+
+    &--large {
+        padding: $spacing-lg $spacing-xl;
+        font-size: toRem(18);
+    }
+
+    &--rounded {
+        border-radius: 50px;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+
+        &:hover {
+            background: $primary-color;
+            color: $white;
+        }
+    }
+}
