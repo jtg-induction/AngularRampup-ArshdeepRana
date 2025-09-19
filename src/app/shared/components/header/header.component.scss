@@ -7,14 +7,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
   .navbar {
-    @include flex();
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+    @include flex(row, space-between, center);
+    max-width: toRem(1200);
     margin: 0 auto;
 
     .logo {
-      font-size: toRem(26px);
+      font-size: toRem(26);
       font-weight: bold;
       color: $primary-color;
       text-decoration: none;
@@ -23,6 +21,9 @@
       &:hover {
         color: $secondary-color;
       }
+
+      margin: 0;
+      padding: 0;
     }
 
     .nav-links {
@@ -37,7 +38,7 @@
 
         .logout-btn {
           background-color: $danger-color;
-          color: white;
+          color: $white;
           border: none;
           border-radius: 6px;
           padding: $spacing-sm $spacing-md;
@@ -53,8 +54,16 @@
           &:active {
             transform: scale(0.97);
           }
+
+          margin: 0;
+          padding: 0;
         }
       }
+    }
+
+    .nav-links li {
+      margin: 0;
+      padding: 0;
     }
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { VALIDATION_MESSAGES } from 'app/constants';
+import { VALIDATION_MESSAGES, STATUS_CODES } from 'app/constants';
 
 import { AuthService } from '@shared/services/';
 import { emailValidator } from '@shared/validators/';
@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit {
       },
       error: (err) => {
 
-        if (err.status === 401 || err.status === 400) {
+        if (err.status === STATUS_CODES.UNAUTHORIZED || err.status === STATUS_CODES.BAD_REQUEST) {
           this.errorMessage = 'Invalid email or password.';
         } else if (err.error?.message) {
           this.errorMessage = err.error.message;
