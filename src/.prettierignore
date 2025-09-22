@@ -1,0 +1,13 @@
+/dist
+
+.angular/
+.nx/
+
+node_modules/
+
+/coverage
+
+.vscode/
+
+package-lock.json
+yarn.lock

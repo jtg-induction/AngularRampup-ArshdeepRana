@@ -1,0 +1,285 @@
+{
+  "users": [
+    {
+      "email": "nikhil@gmail.com",
+      "password": "$2a$10$77PnVIedOS2rw3ijecqx8.GDOT6vvk4ihbGudTyQpqG4tZ4/MBXpC",
+      "username": "Nikhil",
+      "id": 1
+    },
+    {
+      "email": "askshay@gmail.com",
+      "password": "$2a$10$VouNdxn6lO4LqKi8hKTHF.9sdbFn0V49QM9H6LfwXaoY7BARMiVmS",
+      "username": "Akshay",
+      "id": 2
+    },
+    {
+      "email": "harshit@gmail.com",
+      "password": "$2a$10$nbBAWiNQobEzW1eUccTOSOV1tURP5sdG0kBXIjducB7pr0nCkBn9q",
+      "username": "Harshit",
+      "id": 3
+    }
+  ],
+  "articles": [
+    {
+      "title": "The Future of Remote Work",
+      "description": "A deep dive into the changing work landscape post-pandemic.",
+      "body": "In recent years, the future of remote work has become a major topic. With growing public interest, it’s expected this trend will continue well into the future.",
+      "author": "Alice Morgan",
+      "tags": [
+        "Remote Work",
+        "Workplace Trends",
+        "Post-Pandemic"
+      ],
+      "id": 1,
+      "date": "2024-01-15T09:30:00Z"
+    },
+    {
+      "title": "AI in Everyday Life",
+      "description": "How AI is integrated into our daily routines and lives.",
+      "body": "Experts believe that AI in everyday life is transforming how we interact. The challenges faced today are prompting new solutions, making it one of the most significant developments of our time.",
+      "author": "Brian Lee",
+      "tags": [
+        "Artificial Intelligence",
+        "Technology",
+        "Daily Life"
+      ],
+      "id": 2,
+      "date": "2024-02-10T14:45:00Z"
+    },
+    {
+      "title": "Climate Change and Its Impact",
+      "description": "Understanding the effects of climate change globally.",
+      "body": "It is becoming increasingly clear that climate change and its impact must be addressed. Governments and industries are adapting quickly, bringing both opportunities and challenges.",
+      "author": "Clara Zhang",
+      "tags": [
+        "Climate Change",
+        "Environment",
+        "Global Impact"
+      ],
+      "id": 3,
+      "date": "2024-05-30T21:00:00Z"
+    },
+    {
+      "title": "The Evolution of Smartphones",
+      "description": "A look at how smartphones have evolved over the years.",
+      "body": "In recent years, the evolution of smartphones has been rapid. This shift has been driven by technological innovations, and this evolution shows no signs of slowing down.",
+      "author": "David Kim",
+      "tags": [
+        "Smartphones",
+        "Technology",
+        "Innovation"
+      ],
+      "id": 4,
+      "date": "2024-05-30T21:00:00Z"
+    },
+    {
+      "title": "Cybersecurity in the Modern Age",
+      "description": "Protecting data and privacy in an increasingly digital world.",
+      "body": "The modern world has seen a rise in cybersecurity threats. Global efforts are being made to address these changes, which may reshape society as we know it.",
+      "author": "Ella Thompson",
+      "tags": [
+        "Cybersecurity",
+        "Data Protection",
+        "Privacy"
+      ],
+      "id": 5,
+      "date": "2024-05-30T21:00:00Z"
+    },
+    {
+      "title": "Renewable Energy Trends",
+      "description": "Exploring clean energy sources and global adoption trends.",
+      "body": "Experts believe that renewable energy trends are reshaping the power sector. Governments and industries are adapting quickly, making it one of the most significant developments of our time.",
+      "author": "Felix White",
+      "tags": [
+        "Renewable Energy",
+        "Clean Energy",
+        "Sustainability"
+      ],
+      "id": 6,
+      "date": "2024-07-09T16:45:00Z"
+    },
+    {
+      "title": "Mental Health Awareness",
+      "description": "Raising awareness about mental health challenges and support.",
+      "body": "It is becoming increasingly clear that mental health awareness is essential. The challenges faced today are prompting new solutions, bringing both opportunities and challenges.",
+      "author": "Grace Liu",
+      "tags": [
+        "Mental Health",
+        "Wellness",
+        "Awareness"
+      ],
+      "id": 7,
+      "date": "2024-07-09T16:45:00Z"
+    },
+    {
+      "title": "The Growth of E-commerce",
+      "description": "How online shopping has transformed consumer behavior.",
+      "body": "More people are realizing that the growth of e-commerce is here to stay. With growing public interest, this evolution shows no signs of slowing down.",
+      "author": "Henry Adams",
+      "tags": [
+        "E-commerce",
+        "Consumer Behavior",
+        "Online Shopping"
+      ],
+      "id": 8,
+      "date": "2024-09-14T19:30:00Z"
+    },
+    {
+      "title": "Space Exploration in the 21st Century",
+      "description": "Human missions to Mars and private space companies' roles.",
+      "body": "In recent years, space exploration in the 21st century has gained momentum. Global efforts are being made to address these changes, making it one of the most significant developments of our time.",
+      "author": "Isla Brown",
+      "tags": [
+        "Space Exploration",
+        "Mars Missions",
+        "Private Space Companies"
+      ],
+      "id": 9,
+      "date": "2024-09-14T19:30:00Z"
+    },
+    {
+      "title": "The Importance of Digital Literacy",
+      "description": "Why digital skills are essential in today’s world.",
+      "body": "More people are realizing that the importance of digital literacy is critical for success. Governments and industries are adapting quickly, bringing both opportunities and challenges.",
+      "author": "Jack Wilson",
+      "tags": [
+        "Digital Literacy",
+        "Skills",
+        "Education"
+      ],
+      "id": 10,
+      "date": "2024-09-14T19:30:00Z"
+    },
+    {
+      "title": "Blockchain Beyond Cryptocurrency",
+      "description": "Uses of blockchain technology beyond digital currencies.",
+      "body": "Experts believe that blockchain beyond cryptocurrency will reshape industries. This shift has been driven by technological innovations, making it one of the most significant developments of our time.",
+      "author": "Karen Black",
+      "tags": [
+        "Blockchain",
+        "Technology",
+        "Industry Innovation"
+      ],
+      "id": 11,
+      "date": "2024-10-02T11:25:00Z"
+    },
+    {
+      "title": "The Rise of Online Education",
+      "description": "The benefits and challenges of virtual learning platforms.",
+      "body": "The modern world has seen a rise in the rise of online education. With growing public interest, this evolution shows no signs of slowing down.",
+      "author": "Leo Parker",
+      "tags": [
+        "Online Education",
+        "Virtual Learning",
+        "EdTech"
+      ],
+      "id": 12,
+      "date": "2024-10-02T11:25:00Z"
+    },
+    {
+      "title": "5G Technology and Connectivity",
+      "description": "What 5G means for connectivity and tech advancements.",
+      "body": "In recent years, 5G technology and connectivity have changed communication. The challenges faced today are prompting new solutions, bringing both opportunities and challenges.",
+      "author": "Mia Green",
+      "tags": [
+        "5G",
+        "Connectivity",
+        "Telecommunications"
+      ],
+      "id": 13,
+      "date": "2024-11-20T06:50:00Z"
+    },
+    {
+      "title": "The Gig Economy Explained",
+      "description": "Understanding freelance and short-term job market dynamics.",
+      "body": "It is becoming increasingly clear that the gig economy explained is crucial to workforce changes. Governments and industries are adapting quickly, making it one of the most significant developments of our time.",
+      "author": "Noah Hall",
+      "tags": [
+        "Gig Economy",
+        "Freelancing",
+        "Workforce"
+      ],
+      "id": 14,
+      "date": "2024-12-31T23:59:00Z"
+    },
+    {
+      "title": "Urban Farming Revolution",
+      "description": "Farming innovations in urban and limited-space settings.",
+      "body": "More people are realizing that urban farming revolution is redefining food sources. This shift has been driven by technological innovations, which may reshape society as we know it.",
+      "author": "Olivia Scott",
+      "tags": [
+        "Urban Farming",
+        "Agriculture",
+        "Innovation"
+      ],
+      "id": 15,
+      "date": "2024-12-31T23:59:00Z"
+    },
+    {
+      "title": "Virtual Reality in Gaming",
+      "description": "The impact of VR on immersive digital entertainment.",
+      "body": "The modern world has seen a rise in virtual reality in gaming. With growing public interest, it’s expected this trend will continue well into the future.",
+      "author": "Peter Young",
+      "tags": [
+        "Virtual Reality",
+        "Gaming",
+        "Entertainment"
+      ],
+      "id": 16,
+      "date": "2025-01-08T15:40:00Z"
+    },
+    {
+      "title": "How Data Shapes Our World",
+      "description": "The power of data analytics in decision-making.",
+      "body": "Experts believe that how data shapes our world is a key factor in innovation. The challenges faced today are prompting new solutions, which may reshape society as we know it.",
+      "author": "Ruby James",
+      "tags": [
+        "Data Analytics",
+        "Big Data",
+        "Innovation"
+      ],
+      "id": 17,
+      "date": "2025-01-08T15:40:00Z"
+    },
+    {
+      "title": "Advancements in Medical Technology",
+      "description": "Innovations improving patient care and treatment outcomes.",
+      "body": "More people are realizing that advancements in medical technology are revolutionizing healthcare. Governments and industries are adapting quickly, bringing both opportunities and challenges.",
+      "author": "Sam Carter",
+      "tags": [
+        "Medical Technology",
+        "Healthcare",
+        "Innovation"
+      ],
+      "id": 18,
+      "date": "2025-03-19T20:20:00Z"
+    },
+    {
+      "title": "The Ethics of Artificial Intelligence",
+      "description": "Exploring the moral dilemmas posed by artificial intelligence.",
+      "body": "It is becoming increasingly clear that the ethics of artificial intelligence need attention. With growing public interest, this evolution shows no signs of slowing down.",
+      "author": "Tina Evans",
+      "tags": [
+        "Artificial Intelligence",
+        "Ethics",
+        "Technology"
+      ],
+      "id": 19,
+      "date": "2025-06-11T09:10:00Z"
+    },
+    {
+      "title": "The Deep Dive into Quantum Computing",
+      "description": "Quantum computing is a revolutionary field that holds the potential to redefine computation as we know it. Unlike classical computers, which operate using bits that are either 0 or 1, quantum computers use qubits that can be both 0 and 1 simultaneously through a phenomenon known as superposition. This property, along with entanglement and quantum tunneling, allows quantum computers to perform complex calculations at unprecedented speeds. While still in the experimental stage, significant advancements have been made by companies like IBM, Google, and startups such as Rigetti Computing. The implications are vast—from breaking traditional encryption methods and optimizing supply chains to accelerating drug discovery and climate modeling. However, there are substantial challenges, including error correction, qubit coherence, and the immense costs involved. As governments and private enterprises invest billions into quantum research, the race toward quantum supremacy continues. Ultimately, the technology could reshape industries, economies, and the very fabric of scientific understanding. It is essential that educational institutions, policymakers, and the tech community collaborate to address the ethical, security, and accessibility concerns that accompany this transformative shift.",
+      "body": "Quantum computing is a revolutionary field that holds the potential to redefine computation as we know it. Unlike classical computers, which operate using bits that are either 0 or 1, quantum computers use qubits that can be both 0 and 1 simultaneously through a phenomenon known as superposition. This property, along with entanglement and quantum tunneling, allows quantum computers to perform complex calculations at unprecedented speeds. While still in the experimental stage, significant advancements have been made by companies like IBM, Google, and startups such as Rigetti Computing. The implications are vast—from breaking traditional encryption methods and optimizing supply chains to accelerating drug discovery and climate modeling. However, there are substantial challenges, including error correction, qubit coherence, and the immense costs involved. As governments and private enterprises invest billions into quantum research, the race toward quantum supremacy continues. Ultimately, the technology could reshape industries, economies, and the very fabric of scientific understanding. It is essential that educational institutions, policymakers, and the tech community collaborate to address the ethical, security, and accessibility concerns that accompany this transformative shift.",
+      "author": "Natalie Rivers",
+      "tags": [
+        "Quantum Computing",
+        "Technology",
+        "Future",
+        "Innovation"
+      ],
+      "id": 20,
+      "date": "2025-06-11T09:10:00Z"
+    }
+  ]
+}
