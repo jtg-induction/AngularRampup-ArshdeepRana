@@ -33,7 +33,7 @@ export class SearchDialogComponent {
         this.hasSearched = true;
 
         this.http
-            .get<any[]>(`${environment.apiUrl}/articles?author_like=${this.query}`)
+            .get<any[]>(`${environment.apiUrl}/articles?title_like=${this.query}`)
             .subscribe({
                 next: (res) => {
                     this.articles = res;

@@ -5,7 +5,7 @@
         <h1 class="article-details__title">{{ article?.title }}</h1>
 
         <button *ngIf="article?.author === currentUsername" (click)="goToEdit()" class="article-details__edit-btn">
-            <mat-icon>edit</mat-icon>
+            <mat-icon title="Edit the article">edit</mat-icon>
         </button>
     </div>
 

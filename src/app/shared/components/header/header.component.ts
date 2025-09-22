@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 
-import { FilterService } from '@shared/services/filter.service';
+import { ArticleFilters, FilterService } from '@shared/services/filter.service';
 
 import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
 import { SearchDialogComponent } from '../search-dialog/search-dialog.component';
@@ -35,17 +35,22 @@ export class HeaderComponent {
   }
 
   openFilterDialog() {
+    let currentFilters: ArticleFilters | undefined;
+    this.filterService.filters$.subscribe(f => currentFilters = f).unsubscribe();
+
     const dialogRef = this.dialog.open(FilterDialogComponent, {
       width: '600px',
-      disableClose: true
+      disableClose: true,
+      data: currentFilters
     });
 
-    dialogRef.afterClosed().subscribe((filters) => {
+    dialogRef.afterClosed().subscribe((filters: ArticleFilters | undefined) => {
       if (filters) {
         this.filterService.setFilters(filters);
       }
     });
   }
+
 
   addArticle() {
     this.router.navigate(['/add']);
