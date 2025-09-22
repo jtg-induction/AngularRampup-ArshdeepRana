@@ -8,6 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 
 import { appRoutes, AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   bootstrap: [AppComponent],
+  providers: [
+    provideAnimationsAsync()
+  ],
 })
 
 export class AppModule { }

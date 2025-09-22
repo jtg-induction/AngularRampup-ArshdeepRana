@@ -1,0 +1,39 @@
+@import 'styles.scss';
+
+:host {
+    display: block;
+    background-color: $background-color;
+    min-height: 100vh;
+    padding: $spacing-xl;
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-lg;
+    padding: $spacing-md $spacing-xs;
+    max-width: toRem(1200);
+    margin: 0 auto;
+
+    @include respond-to(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.empty-message {
+    text-align: center;
+    font-size: toRem(18);
+    color: lighten($text-color, 35%);
+    margin-top: $spacing-xl;
+}
+
+.pagination-controls {
+    @include flex(row, center, center, $spacing-md);
+    margin-top: $spacing-lg;
+
+    span {
+        font-weight: $font-weight-semi-bold;
+        font-size: toRem(16);
+        color: $text-color;
+    }
+}

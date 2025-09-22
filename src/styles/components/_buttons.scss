@@ -7,12 +7,12 @@
     border: none;
     border-radius: toRem(200);
     cursor: pointer;
-    transition: all 0.3s ease;
+    @include transition(all, 0.3s, ease);
     font-size: toRem(16);
 
     &:hover {
         transform: translateY(-2px) scale(1.02);
-        box-shadow: 0 8px 20px rgba($primary-color, 0.4);
+        box-shadow: 0 toRem(8) toRem(20) rgba($primary-color, 0.4);
     }
 
     &:disabled {
@@ -41,8 +41,7 @@
     &--danger {
         background-color: $danger-color;
         color: $white;
-        border-radius: 6px;
-        border: none;
+        border-radius: toRem(6);
 
         &:hover {
             background-color: darken($danger-color, 10%);
@@ -65,12 +64,12 @@
     }
 
     &--rounded {
-        border-radius: 50px;
+        border-radius: toRem(50);
     }
 
     &--outline {
         background: transparent;
-        border: 2px solid $primary-color;
+        border: toRem(2) solid $primary-color;
         color: $primary-color;
 
         &:hover {

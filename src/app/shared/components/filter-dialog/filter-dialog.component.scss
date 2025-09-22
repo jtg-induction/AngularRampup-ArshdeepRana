@@ -1,0 +1,73 @@
+@import 'styles.scss';
+
+.dialog-header {
+    @include flex(row, space-between, center);
+
+    h2 {
+        margin: 0;
+        font-size: toRem(18);
+        font-weight: $font-weight-semi-bold;
+        color: $text-color;
+    }
+}
+
+.filter-dialog {
+    @include flex(column, flex-start, flex-start, $spacing-lg);
+}
+
+.filter-section {
+    h3 {
+        font-size: toRem(18);
+        margin-bottom: $spacing-sm;
+        color: $text-color;
+    }
+
+    .date-filters {
+        @include flex(column, center, center, $spacing-sm);
+
+        input {
+            padding: $spacing-sm;
+            border: toRem(1) solid lighten($text-color, 70%);
+            border-radius: toRem(6);
+            font-size: toRem(16);
+        }
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-sm;
+
+        span {
+            padding: $spacing-xs $spacing-sm;
+            border: toRem(1) solid $primary-color;
+            border-radius: toRem(20);
+            cursor: pointer;
+            font-size: toRem(14);
+            @include transition(background, 0.2s);
+            @include transition(color, 0.2s);
+
+            &:hover {
+                background: lighten($primary-color, 45%);
+                color: $primary-color;
+            }
+
+            &.selected {
+                background: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.actions {
+    @include flex(row, flex-end, center, $spacing-sm);
+}
+
+@include respond-to(md) {
+    .filter-section {
+        .date-filters {
+            flex-direction: row;
+        }
+    }
+}

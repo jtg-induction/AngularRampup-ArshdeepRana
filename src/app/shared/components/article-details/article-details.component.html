@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div *ngIf="article" class="article-details">
+    <div class="title-row">
+        <h1>{{ article?.title }}</h1>
+
+        <button *ngIf="article?.author === currentUsername" (click)="goToEdit()" class="edit-btn">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+
+    <p><strong>Author:</strong> {{ article?.author }}</p>
+
+    <p class="description">
+        {{ isExpanded ? article?.description : (article?.description | slice:0:200) }}
+        <span *ngIf="article?.description && article.description.length > 200">
+            <a class="toggle" (click)="toggleDescription($event)">
+                {{ isExpanded ? 'Read less' : '... Read more' }}
+            </a>
+        </span>
+    </p>
+
+    <div class="tags">
+        <span *ngFor="let tag of article.tags">{{ tag }}</span>
+    </div>
+
+    <div class="body">{{ article?.body }}</div>
+</div>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+<div class="add-article-container">
+    <app-article-form [submitLabel]="'Publish'" (formSubmit)="handleSubmit($event)">
+    </app-article-form>
+
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>

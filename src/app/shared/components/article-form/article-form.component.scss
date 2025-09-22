@@ -1,0 +1,34 @@
+@import 'styles.scss';
+
+.article-form-container {
+    background: $background-color;
+    padding: $spacing-lg;
+    border-radius: toRem(12);
+    max-width: toRem(600);
+    margin: 0 auto;
+
+    form {
+        @include flex(column, flex-start, stretch, $spacing-md);
+
+        label {
+            font-weight: $font-weight-semi-bold;
+            margin-bottom: $spacing-sm;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xs;
+
+            input,
+            textarea {
+                padding: $spacing-sm;
+                border: toRem(1) solid lighten($text-color, 40%);
+                border-radius: toRem(8);
+                font-size: toRem(12);
+            }
+        }
+
+        .error {
+            color: $danger-color;
+            font-size: toRem(14);
+        }
+    }
+}
