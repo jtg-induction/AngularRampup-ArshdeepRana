@@ -13,7 +13,7 @@ export function uniqueUsernameValidator(userService: UserService): AsyncValidato
 
     return timer(TIMER_DURATION).pipe(
       switchMap(() =>
-        userService.checkUsername(control.value).pipe(
+        userService.isUniqueUsername(control.value).pipe(
           map(isUnique => (isUnique ? null : { usernameTaken: true })),
           catchError(() => of(null))
         )
