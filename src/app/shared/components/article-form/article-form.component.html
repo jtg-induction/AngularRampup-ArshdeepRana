@@ -1,33 +1,35 @@
-<div class="article-form-container">
+<div class="article-form">
     <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-        <label>
-            Title
-            <input type="text" formControlName="title" />
-        </label>
-        <div class="error" *ngIf="f['title'].invalid && (f['title'].touched || f['title'].dirty)">
-            Title is required (min 5 chars).
+        <div class="article-form__field">
+            <label class="article-form__label">Title</label>
+            <input class="article-form__control" type="text" formControlName="title" />
+            <div class="article-form__error" *ngIf="f['title'].invalid && (f['title'].touched || f['title'].dirty)">
+                Title is required (min 5 chars).
+            </div>
         </div>
 
-        <label>
-            Description
-            <input type="text" formControlName="description" />
-        </label>
-        <div class="error" *ngIf="f['description'].invalid && (f['description'].touched || f['description'].dirty)">
-            Description is required (min 10 chars).
+        <div class="article-form__field">
+            <label class="article-form__label">Description</label>
+            <input class="article-form__control" type="text" formControlName="description" />
+            <div class="article-form__error"
+                *ngIf="f['description'].invalid && (f['description'].touched || f['description'].dirty)">
+                Description is required (min 10 chars).
+            </div>
         </div>
 
-        <label>
-            Body
-            <textarea formControlName="body" rows="6"></textarea>
-        </label>
-        <div class="error" *ngIf="f['body'].invalid && (f['body'].touched || f['body'].dirty)">
-            Body is required (min 20 chars).
+        <div class="article-form__field">
+            <label class="article-form__label">Body</label>
+            <textarea class="article-form__control" formControlName="body" rows="6"></textarea>
+            <div class="article-form__error" *ngIf="f['body'].invalid && (f['body'].touched || f['body'].dirty)">
+                Body is required (min 20 chars).
+            </div>
         </div>
 
-        <label>
-            Tags (comma separated)
-            <input type="text" formControlName="tags" placeholder="e.g. Tech, AI, Innovation" />
-        </label>
+        <div class="article-form__field">
+            <label class="article-form__label">Tags (comma separated)</label>
+            <input class="article-form__control" type="text" formControlName="tags"
+                placeholder="e.g. Tech, AI, Innovation" />
+        </div>
 
         <button class="button button--primary" type="submit" [disabled]="form.invalid">
             {{ submitLabel }}

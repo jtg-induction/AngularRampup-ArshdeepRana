@@ -10,16 +10,16 @@
     box-shadow: 0 toRem(10) toRem(40) rgba($black-russian, 0.08);
     animation: fadeUp 0.6s ease-out;
 
-    h1 {
-        font-size: toRem(32);
-        font-weight: $font-weight-extra-bold;
+    &__title-row {
+        @include flex(row, space-between, center);
         margin-bottom: $spacing-md;
-        color: $primary-color;
-        line-height: 1.2;
-        letter-spacing: -0.5px;
     }
 
-    .edit-btn {
+    &__title {
+        color: $primary-color;
+    }
+
+    &__edit-btn {
         background: transparent;
         border: none;
         cursor: pointer;
@@ -33,7 +33,7 @@
         justify-content: center;
 
         mat-icon {
-            font-size: toRem(22px);
+            font-size: toRem(22);
         }
 
         &:hover {
@@ -46,11 +46,7 @@
         }
     }
 
-
-    p {
-        font-size: toRem(16);
-        line-height: 1.7;
-        color: $text-color;
+    &__meta {
         margin-bottom: $spacing-md;
 
         strong {
@@ -58,11 +54,28 @@
         }
     }
 
-    .tags {
+    &__description {
+        margin-bottom: $spacing-md;
+
+        &-toggle {
+            color: $primary-color;
+            font-weight: $font-weight-semi-bold;
+            cursor: pointer;
+            margin-left: $spacing-xs;
+            @include transition(color, 0.2s);
+
+            &:hover {
+                color: darken($primary-color, 10%);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__tags {
         @include flex(row, flex-start, center, $spacing-sm, wrap);
         margin-bottom: $spacing-lg;
 
-        span {
+        &-item {
             background: $primary-color;
             color: $white;
             font-size: toRem(14);
@@ -88,86 +101,9 @@
         }
     }
 
-    .body {
-        font-size: toRem(16);
-        line-height: 1.8;
-        color: darken($text-color, 10%);
+    &__body {
         margin-top: $spacing-lg;
-
-        h2,
-        h3,
-        h4 {
-            margin-top: $spacing-lg;
-            margin-bottom: $spacing-sm;
-            font-weight: $font-weight-bold;
-            color: $primary-color;
-        }
-
-        h2 {
-            font-size: toRem(24);
-        }
-
-        h3 {
-            font-size: toRem(20);
-        }
-
-        h4 {
-            font-size: toRem(18);
-        }
-
-        ul,
-        ol {
-            margin: $spacing-md $spacing-lg;
-            padding-left: $spacing-lg;
-
-            li {
-                margin-bottom: $spacing-xs;
-            }
-        }
-
-        blockquote {
-            border-left: toRem(4) solid $secondary-color;
-            padding-left: $spacing-md;
-            font-style: italic;
-            color: darken($text-color, 20%);
-            margin: $spacing-md 0;
-        }
-
-        code {
-            background: $background-color;
-            padding: toRem(2) toRem(6);
-            border-radius: toRem(4);
-            font-size: toRem(14);
-            color: $danger-color;
-        }
-
-        pre {
-            background: $background-color;
-            padding: $spacing-md;
-            border-radius: toRem(12);
-            overflow-x: auto;
-            font-size: toRem(14);
-        }
-    }
-}
-
-.description {
-    font-size: toRem(16);
-    line-height: 1.6;
-    color: $text-color;
-    margin-bottom: $spacing-md;
-
-    .toggle {
-        color: $primary-color;
-        font-weight: $font-weight-semi-bold;
-        cursor: pointer;
-        margin-left: $spacing-xs;
-        @include transition(color, 0.2s);
-
-        &:hover {
-            color: darken($primary-color, 10%);
-            text-decoration: underline;
-        }
+        color: darken($text-color, 10%);
     }
 }
 
@@ -189,30 +125,20 @@
     .article-details {
         padding: $spacing-lg;
 
-        h1 {
+        &__title {
             font-size: toRem(22);
-        }
-
-        .body {
-            font-size: toRem(14);
         }
     }
 }
 
 @include respond-to(md) {
-    .article-details h1 {
-        font-size: toRem(32);
+    .article-details__title {
+        font-size: toRem(28);
     }
 }
 
 @include respond-to(lg) {
-    .article-details {
-        h1 {
-            font-size: toRem(34);
-        }
-
-        .body {
-            font-size: toRem(16);
-        }
+    .article-details__title {
+        font-size: toRem(32);
     }
 }

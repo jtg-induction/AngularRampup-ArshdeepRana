@@ -17,13 +17,13 @@
         transform: translateY(-2px);
     }
 
-    .author {
+    &__author {
         font-size: toRem(14);
         color: $secondary-color;
         margin-bottom: $spacing-sm;
     }
 
-    .title {
+    &__title {
         font-size: toRem(22);
         font-weight: $font-weight-bold;
         color: $text-color;
@@ -31,28 +31,28 @@
         @include line-clamp(1);
     }
 
-    .description {
+    &__description {
         font-size: toRem(16);
         color: lighten($text-color, 30%);
         @include line-clamp(1);
     }
-}
 
-.tags-container {
-    margin-top: $spacing-sm;
-}
+    &__tags {
+        margin-top: $spacing-sm;
 
-.tag {
-    display: inline-block;
-    padding: $spacing-xs $spacing-md;
-    margin-right: $spacing-sm;
-    margin-bottom: $spacing-sm;
-    border-radius: toRem(12);
-    color: $white;
-    font-size: toRem(12);
-    font-weight: $font-weight-medium;
-    user-select: none;
-    cursor: default;
+        &-item {
+            display: inline-block;
+            padding: $spacing-xs $spacing-md;
+            margin-right: $spacing-sm;
+            margin-bottom: $spacing-sm;
+            border-radius: toRem(12);
+            color: $white;
+            font-size: toRem(12);
+            font-weight: $font-weight-medium;
+            user-select: none;
+            cursor: default;
+        }
+    }
 }
 
 @keyframes fadeInUp {

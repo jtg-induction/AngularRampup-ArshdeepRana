@@ -1,6 +1,6 @@
 @import 'styles.scss';
 
-.article-form-container {
+.article-form {
     background: $background-color;
     padding: $spacing-lg;
     border-radius: toRem(12);
@@ -9,26 +9,27 @@
 
     form {
         @include flex(column, flex-start, stretch, $spacing-md);
+    }
 
-        label {
-            font-weight: $font-weight-semi-bold;
-            margin-bottom: $spacing-sm;
-            display: flex;
-            flex-direction: column;
-            gap: $spacing-xs;
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
 
-            input,
-            textarea {
-                padding: $spacing-sm;
-                border: toRem(1) solid lighten($text-color, 40%);
-                border-radius: toRem(8);
-                font-size: toRem(12);
-            }
-        }
+    &__label {
+        font-weight: $font-weight-semi-bold;
+    }
 
-        .error {
-            color: $danger-color;
-            font-size: toRem(14);
-        }
+    &__control {
+        padding: $spacing-sm;
+        border: toRem(1) solid lighten($text-color, 40%);
+        border-radius: toRem(8);
+        font-size: toRem(14);
+    }
+
+    &__error {
+        color: $danger-color;
+        font-size: toRem(14);
     }
 }

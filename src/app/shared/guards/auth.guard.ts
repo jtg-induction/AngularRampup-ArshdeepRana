@@ -3,8 +3,8 @@ import { CanActivate, Router } from '@angular/router';
 
 import { jwtDecode } from 'jwt-decode';
 
-import { AuthService } from '@shared/services';
 import { JWT } from '@shared/models';
+import { AuthService } from '@shared/services';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {

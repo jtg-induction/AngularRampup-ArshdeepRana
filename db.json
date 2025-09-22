@@ -17,6 +17,18 @@
       "password": "$2a$10$nbBAWiNQobEzW1eUccTOSOV1tURP5sdG0kBXIjducB7pr0nCkBn9q",
       "username": "Harshit",
       "id": 3
+    },
+    {
+      "email": "arsh@gmail.com",
+      "password": "$2a$10$2D8DrrHAxz5EA8woT3ZOAenZ926fEyHMuC4gTZejwed5VFWFVKmze",
+      "username": "Arsh",
+      "id": 4
+    },
+    {
+      "email": "siddharth@gmail.com",
+      "password": "$2a$10$KwOdRisxGrq0nQ9wRV5vMegiZuJcpKPAmc4sSzUap05suhlRZru86",
+      "username": "Siddharth",
+      "id": 5
     }
   ],
   "articles": [
@@ -291,6 +303,40 @@
       "author": "Harshit",
       "date": "2025-09-22T05:42:00.709Z",
       "id": 21
+    },
+    {
+      "title": "Arsh ",
+      "description": "This Article was written by me",
+      "body": "Yes, its true.\nI wrote this",
+      "tags": [
+        "Arsh"
+      ],
+      "id": 22,
+      "author": "Arsh",
+      "date": "2025-09-22T07:50:09.912Z"
+    },
+    {
+      "title": "Before demo",
+      "description": "This is before demo",
+      "body": "This is before demo, adding article",
+      "tags": [
+        "TCH",
+        "TCH"
+      ],
+      "id": 23,
+      "author": "Siddharth",
+      "date": "2025-09-22T08:11:34.989Z"
+    },
+    {
+      "title": "article 2",
+      "description": "wduywqndpmwodj aqod",
+      "body": "dwa diwajn dojw djwa diwj d",
+      "tags": [
+        "dw"
+      ],
+      "id": 24,
+      "author": "Siddharth",
+      "date": "2025-09-22T08:19:44.340Z"
     }
   ]
 }

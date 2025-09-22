@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 
-import { AddArticleComponent } from "./add-article.component";
-import { AddArticleRoutingModule } from "./add-article-routing.module";
-
-import { HeaderComponent } from "@shared/components/header/header.component";
 import { ArticleFormComponent } from "@shared/components/article-form/article-form.component";
+import { HeaderComponent } from "@shared/components/header/header.component";
+
+import { AddArticleRoutingModule } from "./add-article-routing.module";
+import { AddArticleComponent } from "./add-article.component";
+
 
 @NgModule({
     declarations: [AddArticleComponent],

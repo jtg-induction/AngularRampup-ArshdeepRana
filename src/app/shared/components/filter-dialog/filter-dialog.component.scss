@@ -1,28 +1,28 @@
 @import 'styles.scss';
 
-.dialog-header {
-    @include flex(row, space-between, center);
-
-    h2 {
-        margin: 0;
-        font-size: toRem(18);
-        font-weight: $font-weight-semi-bold;
-        color: $text-color;
-    }
-}
-
 .filter-dialog {
     @include flex(column, flex-start, flex-start, $spacing-lg);
-}
 
-.filter-section {
-    h3 {
-        font-size: toRem(18);
-        margin-bottom: $spacing-sm;
-        color: $text-color;
+    &__header {
+        @include flex(row, space-between, center);
+
+        h2 {
+            margin: 0;
+            font-size: toRem(18);
+            font-weight: $font-weight-semi-bold;
+            color: $text-color;
+        }
     }
 
-    .date-filters {
+    &__section {
+        h3 {
+            font-size: toRem(18);
+            margin-bottom: $spacing-sm;
+            color: $text-color;
+        }
+    }
+
+    &__date-filters {
         @include flex(column, center, center, $spacing-sm);
 
         input {
@@ -33,7 +33,7 @@
         }
     }
 
-    .tags {
+    &__tags {
         display: flex;
         flex-wrap: wrap;
         gap: $spacing-sm;
@@ -58,16 +58,14 @@
             }
         }
     }
-}
 
-.actions {
-    @include flex(row, flex-end, center, $spacing-sm);
+    &__actions {
+        @include flex(row, flex-end, center, $spacing-sm);
+    }
 }
 
 @include respond-to(md) {
-    .filter-section {
-        .date-filters {
-            flex-direction: row;
-        }
+    .filter-dialog__date-filters {
+        flex-direction: row;
     }
 }
