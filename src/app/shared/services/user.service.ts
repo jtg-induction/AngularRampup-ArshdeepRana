@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  checkUsername(username: string): Observable<boolean> {
+  isUniqueUsername(username: string): Observable<boolean> {
     return this.http.get<User[]>(`${this.apiUrl}/users?username=${username}`).pipe(
       map(users => users.length === 0)
     );

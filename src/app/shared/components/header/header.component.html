@@ -1,10 +1,25 @@
 <header class="app-header">
-  <nav class="navbar">
-    <a class="logo" href="/dashboard">Vibe Reads</a>
+  <nav class="app-header__navbar">
+    <a class="app-header__logo" href="http://localhost:4200/dashboard">Vibe Reads</a>
 
-    <ul class="nav-links">
-      <li>
-        <button class="button--danger button--small" (click)="logout()">Logout</button>
+    <ul class="app-header__nav-links">
+      <li class="app-header__nav-item">
+        <button class="icon-btn" (click)="addArticle()">
+          <mat-icon title="Add a new Article">add</mat-icon>
+        </button>
+      </li>
+      <li class="app-header__nav-item">
+        <button class="icon-btn" (click)="openSearchDialog()">
+          <mat-icon title="Search by article name">search</mat-icon>
+        </button>
+      </li>
+      <li class="app-header__nav-item">
+        <button class="icon-btn" (click)="openFilterDialog()">
+          <mat-icon title="Apply filters">filter_list</mat-icon>
+        </button>
+      </li>
+      <li class="app-header__nav-item">
+        <button class="button button--danger" (click)="logout()">Logout</button>
       </li>
     </ul>
   </nav>

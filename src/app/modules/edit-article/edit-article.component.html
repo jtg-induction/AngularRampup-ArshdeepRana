@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<div class="edit-article-container">
+    <app-article-form *ngIf="articleData" [initialData]="articleData" [submitLabel]="'Update'"
+        (formSubmit)="handleUpdate($event)">
+    </app-article-form>
+
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>

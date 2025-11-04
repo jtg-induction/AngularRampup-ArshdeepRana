@@ -14,7 +14,7 @@ export function strongPasswordValidator(): ValidatorFn {
     const hasLower = REGULAR_EXPRESSIONS.HAS_LOWER.test(value);
     const hasNumber = REGULAR_EXPRESSIONS.HAS_NUMBER.test(value);
 
-    // match non-alphanumeric chars
+    // Match non-alphanumeric chars
     const specialMatches = value.match(REGULAR_EXPRESSIONS.HAS_SPECIALS);
     const specialCount = specialMatches ? specialMatches.length : 0;
 

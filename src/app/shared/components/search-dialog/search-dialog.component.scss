@@ -1,0 +1,72 @@
+@import 'styles.scss';
+
+.dialog-header {
+    @include flex(row, space-between, center);
+    margin-bottom: $spacing-md;
+    overflow: hidden;
+    padding: $spacing-sm $spacing-xs;
+
+    h2 {
+        margin: 0;
+        font-size: toRem(26);
+        font-weight: $font-weight-semi-bold;
+        color: $text-color;
+    }
+}
+
+.search-dialog {
+    @include flex(column, flex-start, flex-start, $spacing-lg);
+}
+
+.search-form {
+    @include flex(column, flex-start, stretch, $spacing-sm);
+
+    input {
+        padding: $spacing-sm $spacing-md;
+        border: toRem(1) solid lighten($text-color, 60%);
+        border-radius: toRem(6);
+        font-size: toRem(16);
+        outline: none;
+        @include transition(border-color, 0.2s);
+        @include transition(box-shadow, 0.2s);
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 0 toRem(2) rgba($primary-color, 0.2);
+        }
+    }
+}
+
+.results {
+    margin-top: $spacing-sm;
+
+    h3 {
+        font-size: toRem(16);
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: $spacing-xs;
+        color: darken($text-color, 20%);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: $spacing-xs 0;
+        border-bottom: toRem(1) solid lighten($text-color, 70%);
+        font-size: toRem(22);
+        color: $text-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+@include respond-to(md) {
+    .search-form {
+        flex-direction: row;
+    }
+}

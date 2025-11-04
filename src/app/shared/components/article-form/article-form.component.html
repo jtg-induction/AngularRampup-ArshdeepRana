@@ -1,0 +1,41 @@
+<div class="article-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <div class="article-form__field">
+            <label class="article-form__label">Title*</label>
+            <input class="article-form__control" type="text" formControlName="title" />
+            <div class="article-form__error" *ngIf="f['title'].invalid && (f['title'].touched || f['title'].dirty)">
+                Title is required (min 5 chars and max 50 chars).
+            </div>
+        </div>
+
+        <div class="article-form__field">
+            <label class="article-form__label">Description*</label>
+            <input class="article-form__control" type="text" formControlName="description" />
+            <div class="article-form__error"
+                *ngIf="f['description'].invalid && (f['description'].touched || f['description'].dirty)">
+                Description is required (min 10 chars and max 100 chars).
+            </div>
+        </div>
+
+        <div class="article-form__field">
+            <label class="article-form__label">Body*</label>
+            <textarea class="article-form__control" formControlName="body" rows="6"></textarea>
+            <div class="article-form__error" *ngIf="f['body'].invalid && (f['body'].touched || f['body'].dirty)">
+                Body is required (min 20 chars and max 500 chars).
+            </div>
+        </div>
+
+        <div class="article-form__field">
+            <label class="article-form__label">Tags (comma separated)</label>
+            <input class="article-form__control" type="text" formControlName="tags"
+                placeholder="e.g. Tech, AI, Innovation" />
+        </div>
+
+        <div class="article-form__btnContainer">
+            <button class="button button--outline" type="reset">Reset</button>
+            <button class="button button--primary" type="submit" [disabled]="form.invalid">
+                {{ submitLabel }}
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+@import 'styles.scss';
+
+.article-form {
+    background: $background-color;
+    padding: $spacing-lg;
+    border-radius: toRem(12);
+    max-width: toRem(600);
+    margin: $spacing-sm auto;
+
+    form {
+        @include flex(column, flex-start, stretch, $spacing-md);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
+
+    &__label {
+        font-weight: $font-weight-semi-bold;
+    }
+
+    &__control {
+        padding: $spacing-sm;
+        border: toRem(1) solid lighten($text-color, 40%);
+        border-radius: toRem(8);
+        font-size: toRem(14);
+    }
+
+    &__error {
+        color: $danger-color;
+        font-size: toRem(14);
+    }
+
+    &__btnContainer {
+        @include flex();
+    }
+}
