@@ -82,7 +82,7 @@
             font-weight: $font-weight-light;
             padding: $spacing-xs $spacing-md;
             border-radius: toRem(9999);
-            letter-spacing: 0.5px;
+            letter-spacing: toRem(0.5);
             box-shadow: 0 toRem(3) toRem(8) rgba($black-russian, 0.1);
             @include transition(all, 0.3s);
 

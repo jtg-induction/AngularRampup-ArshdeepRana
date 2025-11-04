@@ -12,7 +12,7 @@
     </form>
 
     <div class="results">
-        <div *ngIf="isLoading">⏳ Searching...</div>
+        <div *ngIf="isLoading">⏳Searching...</div>
 
         <ul *ngIf="!isLoading && articles.length > 0">
             <li *ngFor="let article of articles" (click)="goToArticle(article.id)" class="result-item">
@@ -21,7 +21,7 @@
         </ul>
 
         <div *ngIf="!isLoading && hasSearched && articles.length === 0">
-            😢 No articles found with title "{{ query }}"
+            No articles found with title "{{ query }}"
         </div>
     </div>
 </div>

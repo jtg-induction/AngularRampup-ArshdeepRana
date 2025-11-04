@@ -12,6 +12,7 @@ export class ArticleCardComponent implements OnInit {
     @Input() author = '';
     @Input() description = '';
     @Input() tags: string[] = [];
+    @Input() date: string = '';
 
     tagColors: string[] = [];
 

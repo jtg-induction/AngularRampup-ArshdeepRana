@@ -4,6 +4,7 @@
     @include flex(column, flex-start, flex-start, $spacing-lg);
 
     &__header {
+        padding: $spacing-sm $spacing-xs;
         @include flex(row, space-between, center);
 
         h2 {

@@ -36,9 +36,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
         this.sub = this.filterService.filters$.subscribe(f => {
             this.filters = f;
-            this.currentPage = 1;
+            this.currentPage;
             this.updateUrl();
-            this.loadArticles();
         });
     }
 
@@ -68,7 +67,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
         if (this.currentPage < this.totalPages) {
             this.currentPage++;
             this.updateUrl();
-            this.loadArticles();
         }
     }
 
@@ -76,7 +74,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
         if (this.currentPage > 1) {
             this.currentPage--;
             this.updateUrl();
-            this.loadArticles();
         }
     }
 

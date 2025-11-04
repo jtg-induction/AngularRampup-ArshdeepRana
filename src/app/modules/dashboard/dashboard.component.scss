@@ -4,7 +4,6 @@
     display: block;
     background-color: $background-color;
     min-height: 100vh;
-    padding: 0 $spacing-xl $spacing-xl;
 }
 
 .articles-container {
@@ -29,7 +28,7 @@
 
 .pagination-controls {
     @include flex(row, center, center, $spacing-md);
-    margin-top: $spacing-lg;
+    margin: $spacing-lg;
 
     span {
         font-weight: $font-weight-semi-bold;

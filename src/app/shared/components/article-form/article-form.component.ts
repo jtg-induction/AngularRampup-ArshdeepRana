@@ -36,9 +36,9 @@ export class ArticleFormComponent implements OnInit, OnChanges {
 
     ngOnInit(): void {
         this.form = this.fb.group({
-            title: ["", [Validators.required, Validators.minLength(5)]],
-            description: ["", [Validators.required, Validators.minLength(10)]],
-            body: ["", [Validators.required, Validators.minLength(20)]],
+            title: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(20)]],
+            description: ["", [Validators.required, Validators.minLength(10), Validators.maxLength(100)]],
+            body: ["", [Validators.required, Validators.minLength(20)], Validators.maxLength(500)],
             tags: [""],
         });
 

@@ -38,7 +38,7 @@ export class SignupComponent implements OnInit {
       ],
       email: [
         '',
-        [Validators.required, Validators.email, emailValidator()],
+        [Validators.required, Validators.email, Validators.maxLength(254), emailValidator()],
         [uniqueEmailValidator(this.userService)],
       ],
       password: [

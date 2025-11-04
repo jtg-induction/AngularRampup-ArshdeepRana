@@ -5,7 +5,7 @@
     padding: $spacing-lg;
     border-radius: toRem(12);
     max-width: toRem(600);
-    margin: 0 auto;
+    margin: $spacing-sm auto;
 
     form {
         @include flex(column, flex-start, stretch, $spacing-md);
@@ -31,5 +31,9 @@
     &__error {
         color: $danger-color;
         font-size: toRem(14);
+    }
+
+    &__btnContainer {
+        @include flex();
     }
 }

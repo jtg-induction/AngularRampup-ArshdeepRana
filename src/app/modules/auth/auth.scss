@@ -31,7 +31,7 @@
   }
 
   &__field {
-    background-color: $white;
+    background-color: inherit;
     @include flex(column, flex-start, flex-start, $spacing-sm);
     width: 100%;
   }

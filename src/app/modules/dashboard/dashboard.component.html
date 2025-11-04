@@ -6,7 +6,8 @@
 
 <div class="articles-container">
     <app-article-card *ngFor="let article of articles" [id]="article.id" [title]="article.title"
-        [author]="article.author" [description]="article.description" [tags]="article.tags">
+        [author]="article.author" [description]="article.description" [tags]="article.tags"
+        [date]="article.date.toLocaleString()">
     </app-article-card>
 </div>
 

@@ -29,6 +29,12 @@
       "password": "$2a$10$KwOdRisxGrq0nQ9wRV5vMegiZuJcpKPAmc4sSzUap05suhlRZru86",
       "username": "Siddharth",
       "id": 5
+    },
+    {
+      "email": "neeraj@gmail.com",
+      "password": "$2a$10$5jmbzfFr8NF3rjB5T59vxOaTlju2YLmiYA.x4FRrYTwio229lxzrO",
+      "username": "Neeraj",
+      "id": 6
     }
   ],
   "articles": [
@@ -337,6 +343,40 @@
       "id": 24,
       "author": "Siddharth",
       "date": "2025-09-22T08:19:44.340Z"
+    },
+    {
+      "title": "This is demo of Angular",
+      "description": "Angular doc :)",
+      "body": "Demo of angular in theta.",
+      "tags": [
+        "Demo"
+      ],
+      "id": 25,
+      "author": "Neeraj",
+      "date": "2025-09-22T12:37:41.478Z"
+    },
+    {
+      "title": "Demo :)",
+      "description": "of angular ",
+      "body": "in theta, first floor",
+      "tags": [
+        "Theta"
+      ],
+      "id": 26,
+      "author": "Neeraj",
+      "date": "2025-09-22T12:39:10.036Z"
+    },
+    {
+      "title": "Before demo",
+      "description": "checking for any disasters",
+      "body": "Please demo mein kuch fatt na jaye.",
+      "tags": [
+        "Fear",
+        "Scary"
+      ],
+      "id": 27,
+      "author": "Harshit",
+      "date": "2025-11-04T05:29:31.485Z"
     }
   ]
 }
